@@ -2764,3 +2764,26 @@ body.light-theme .product-footer {
     font-family: var(--font-title);
     font-size: 1.2rem;
 }
+
+/* --- MOBILE SPECIFIC OVERRIDES --- */
+@media (max-width: 576px) {
+    .hero-container {
+        padding: 0 16px;
+    }
+    
+    .hero-actions {
+        flex-direction: column;
+        gap: 12px;
+        width: 100%;
+        max-width: 290px;
+        margin: 0 auto 36px auto;
+    }
+    
+    .hero-actions .btn-large {
+        width: 100%;
+        padding: 12px 24px;
+        font-size: 1.1rem;
+        box-sizing: border-box;
+    }
+}
+
