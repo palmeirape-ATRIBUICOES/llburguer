@@ -6,9 +6,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menu-toggle');
     const navMenu = document.getElementById('nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
-    const burgerContainer = document.querySelector('.burger-real-container');
-    const burgerSlices = document.querySelectorAll('.burger-real-slice');
-    const tooltips = document.querySelectorAll('.burger-tooltip');
     
     // --- STICKY HEADER ---
     window.addEventListener('scroll', () => {
@@ -17,7 +14,6 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             header.classList.remove('scrolled');
         }
-        updateBurgerScroll();
         updateActiveLink();
     });
 
@@ -51,86 +47,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 document.querySelector('.nav-menu a[href*=' + sectionId + ']')?.classList.add('active');
             } else {
                 document.querySelector('.nav-menu a[href*=' + sectionId + ']')?.classList.remove('active');
-            }
-        });
-    }
-
-    // --- LÓGICA DE DESMONTAGEM DO HAMBÚRGUER ---
-    function updateBurgerScroll() {
-        if (!burgerContainer) return;
-        
-        const maxScroll = 550;
-        const currentScroll = window.scrollY;
-        
-        // Calcula a proporção (de 0 a 1)
-        let ratio = currentScroll / maxScroll;
-        ratio = Math.max(0, Math.min(1, ratio)); // Clampa entre 0 e 1
-        
-        // Atualiza a variável CSS no container para as fatias de imagens reais se moverem
-        burgerContainer.style.setProperty('--scroll-ratio', ratio);
-    }
-    
-    // Executa uma vez no início para alinhar o hambúrguer
-    updateBurgerScroll();
-
-    // --- INTERAÇÃO DE HOVER E TOOLTIPS (COMPATÍVEL COM TOQUE EM CELULAR) ---
-    burgerSlices.forEach(slice => {
-        slice.addEventListener('mouseenter', () => {
-            if (window.matchMedia('(hover: hover)').matches) {
-                showTooltipForSlice(slice);
-            }
-        });
-        
-        slice.addEventListener('mouseleave', () => {
-            if (window.matchMedia('(hover: hover)').matches) {
-                hideAllTooltips();
-            }
-        });
-
-        slice.addEventListener('click', (e) => {
-            e.stopPropagation();
-            
-            const sliceId = slice.getAttribute('id');
-            const targetTooltipId = sliceId.replace('real-slice-', 'tooltip-real-');
-            const activeTooltip = document.getElementById(targetTooltipId);
-            
-            if (activeTooltip) {
-                const wasActive = activeTooltip.classList.contains('active');
-                hideAllTooltips();
-                if (!wasActive) {
-                    activeTooltip.classList.add('active');
-                }
-            }
-        });
-    });
-
-    function showTooltipForSlice(slice) {
-        const currentRatio = parseFloat(burgerContainer.style.getPropertyValue('--scroll-ratio') || 0);
-        if (currentRatio < 0.20) return;
-        
-        const sliceId = slice.getAttribute('id');
-        const targetTooltipId = sliceId.replace('real-slice-', 'tooltip-real-');
-        const activeTooltip = document.getElementById(targetTooltipId);
-        
-        if (activeTooltip) {
-            hideAllTooltips();
-            activeTooltip.classList.add('active');
-        }
-    }
-
-    function hideAllTooltips() {
-        tooltips.forEach(t => t.classList.remove('active'));
-    }
-
-    document.addEventListener('click', () => {
-        hideAllTooltips();
-    });
-
-    const burgerStickyWrapper = document.querySelector('.burger-sticky-wrapper');
-    if (burgerStickyWrapper) {
-        burgerStickyWrapper.addEventListener('mouseleave', () => {
-            if (window.matchMedia('(hover: hover)').matches) {
-                hideAllTooltips();
             }
         });
     }
