@@ -239,24 +239,31 @@ ul {
 }
 
 /* Estado Minimizado do Cabeçalho (Scroll) */
-.header.scrolled .logo-text {
-    display: none;
+.header.scrolled .logo {
+    font-size: 1.7rem;
 }
 
 .header.scrolled .logo-img {
-    width: 40px;
-    height: 40px;
+    width: 38px;
+    height: 38px;
 }
 
 /* Responsividade Mobile (Logo minimizado) */
 @media (max-width: 768px) {
     .logo {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
         gap: 8px;
     }
     .logo-img {
         width: 32px;
         height: 32px;
+    }
+    .header.scrolled .logo {
+        font-size: 1.25rem;
+    }
+    .header.scrolled .logo-img {
+        width: 28px;
+        height: 28px;
     }
 }
 
@@ -1549,9 +1556,54 @@ ul {
         padding-bottom: 40px;
     }
 
-    /* Esconde o card do Instagram no Hero no celular para manter foco na mensagem e evitar rolagem excessiva */
+    /* Ajustes para o Card do Instagram no Hero (Mobile) */
     .burger-showcase {
-        display: none !important;
+        min-height: auto;
+        padding: 20px 0;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
+    .hero-instagram-card {
+        padding: 16px;
+        gap: 16px;
+        max-width: calc(100% - 32px) !important; /* Garante margem nas laterais */
+        margin: 0 auto;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+    }
+    
+    .insta-profile-img {
+        width: 38px !important;
+        height: 38px !important;
+    }
+    
+    .insta-username {
+        font-size: 0.95rem !important;
+    }
+    
+    .insta-stats {
+        font-size: 0.72rem !important;
+    }
+    
+    .insta-follow-btn {
+        padding: 4px 12px !important;
+        font-size: 0.75rem !important;
+        height: auto !important;
+    }
+    
+    .insta-grid {
+        gap: 6px !important;
+    }
+    
+    .insta-grid-item {
+        border-radius: 6px !important;
+    }
+    
+    .btn-view-insta {
+        padding: 10px !important;
+        font-size: 0.82rem !important;
     }
 
     .hero-features {
