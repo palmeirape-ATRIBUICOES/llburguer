@@ -435,7 +435,7 @@ ul {
     color: var(--color-text-muted);
 }
 
-/* --- BURGER SHOWCASE (INSTAGRAM EMBED CARD) --- */
+/* --- BURGER SHOWCASE (INSTAGRAM MOCKUP CARD) --- */
 .burger-showcase {
     position: relative;
     width: 100%;
@@ -449,21 +449,171 @@ ul {
 .hero-instagram-card {
     position: relative;
     width: 100%;
-    max-width: 480px;
-    height: 530px;
-    border-radius: 20px; /* Cantos arredondados mais premium */
-    background: rgba(13, 10, 7, 0.95); /* Fundo escuro de alto contraste */
-    border: 1.5px solid rgba(234, 179, 8, 0.35); /* Borda dourada mais visível */
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 30px rgba(234, 179, 8, 0.15), 0 20px 50px rgba(0, 0, 0, 0.85); /* Brilho e sombra aprimorados */
+    max-width: 440px;
+    border-radius: 20px;
+    background: rgba(36, 26, 14, 0.25); /* Fundo super transparente com tom do site */
+    border: 1.5px solid rgba(234, 179, 8, 0.25);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.02);
     overflow: hidden;
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    transition: var(--transition-smooth);
 }
 
-.instagram-profile-iframe {
+.hero-instagram-card:hover {
+    border-color: rgba(234, 179, 8, 0.45);
+    box-shadow: 0 0 50px rgba(234, 179, 8, 0.08), 0 20px 60px rgba(0, 0, 0, 0.5);
+    transform: translateY(-4px);
+}
+
+/* Header do Instagram Mockup */
+.insta-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.insta-profile-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.insta-profile-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    border: 2px solid var(--color-primary);
+    object-fit: cover;
+}
+
+.insta-profile-text {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.insta-username {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-family: var(--font-title);
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.insta-verified-icon {
+    color: #3897f0;
+    font-size: 0.9rem;
+}
+
+.insta-stats {
+    font-size: 0.78rem;
+    color: var(--color-text-muted);
+}
+
+.insta-follow-btn {
+    background: #0095f6;
+    color: #ffffff;
+    border: none;
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: var(--transition-quick);
+}
+
+.insta-follow-btn:hover {
+    background: #1877f2;
+}
+
+/* Grid de fotos */
+.insta-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+    width: 100%;
+}
+
+.insta-grid-item {
+    position: relative;
+    aspect-ratio: 1 / 1;
+    border-radius: 8px;
+    overflow: hidden;
+    background: rgba(0,0,0,0.1);
+}
+
+.insta-grid-item img {
     width: 100%;
     height: 100%;
-    border: none;
-    border-radius: 20px;
+    object-fit: cover;
+    transition: var(--transition-smooth);
+}
+
+.insta-item-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    opacity: 0;
+    color: #ffffff;
+    font-size: 0.8rem;
+    font-weight: 600;
+    transition: var(--transition-quick);
+}
+
+.insta-grid-item:hover img {
+    transform: scale(1.1);
+}
+
+.insta-grid-item:hover .insta-item-overlay {
+    opacity: 1;
+}
+
+/* Footer do Instagram Mockup */
+.insta-footer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 4px;
+}
+
+.btn-view-insta {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--font-title);
+    font-weight: 600;
+    font-size: 0.9rem;
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid rgba(234, 179, 8, 0.2);
+    background: rgba(234, 179, 8, 0.05);
+    color: var(--color-primary);
+    cursor: pointer;
+    transition: var(--transition-smooth);
+}
+
+.btn-view-insta:hover {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    color: #080705;
+    border-color: transparent;
+    box-shadow: 0 4px 15px rgba(234, 179, 8, 0.15);
 }
 
 /* Instagram Promo Cards (Quem Somos & Kids) */
@@ -1379,7 +1529,7 @@ ul {
     .hero-image-card, .hero-instagram-card {
         margin: 0 auto;
         max-width: 420px;
-        height: 480px;
+        height: auto;
     }
 }
 
@@ -1474,7 +1624,7 @@ ul {
     
     .hero-image-card, .hero-instagram-card {
         max-width: 320px;
-        height: 380px;
+        height: auto;
     }
     
     .instagram-grid {
@@ -2109,8 +2259,29 @@ body.light-theme .instagram-post-card {
 }
 
 body.light-theme .hero-instagram-card {
-    background: rgba(255, 255, 255, 0.7);
-    border-color: rgba(234, 179, 8, 0.3);
+    background: rgba(255, 255, 255, 0.45);
+    border-color: rgba(234, 179, 8, 0.25);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+body.light-theme .insta-username {
+    color: #1c1917;
+}
+
+body.light-theme .insta-stats {
+    color: #57534e;
+}
+
+body.light-theme .btn-view-insta {
+    background: rgba(0, 0, 0, 0.02);
+    border-color: rgba(0, 0, 0, 0.08);
+    color: #57534e;
+}
+
+body.light-theme .btn-view-insta:hover {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
+    color: #080705;
+    border-color: transparent;
 }
 
 body.light-theme .floating-bg-item svg {
