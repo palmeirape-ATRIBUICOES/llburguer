@@ -1155,3 +1155,27 @@ body {
         font-size: 2.6rem;
     }
 }
+
+@media (max-width: 480px) {
+    .hero-huge-title {
+        font-size: 2.5rem;
+    }
+    
+    .lab-section-title {
+        font-size: 2.0rem;
+    }
+    
+    .lab-stores-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px;
+    }
+    
+    .lab-products-grid {
+        grid-template-columns: 1fr !important;
+        gap: 24px;
+    }
+    
+    .container {
+        padding: 0 16px;
+    }
+}

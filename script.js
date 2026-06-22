@@ -73,35 +73,65 @@ document.addEventListener('DOMContentLoaded', () => {
     // Executa uma vez no início para alinhar o hambúrguer
     updateBurgerScroll();
 
-    // --- INTERAÇÃO DE HOVER E TOOLTIPS ---
+    // --- INTERAÇÃO DE HOVER E TOOLTIPS (COMPATÍVEL COM TOQUE EM CELULAR) ---
     burgerSlices.forEach(slice => {
         slice.addEventListener('mouseenter', () => {
-            const currentRatio = parseFloat(burgerContainer.style.getPropertyValue('--scroll-ratio') || 0);
-            // Só exibe tooltips se o hambúrguer estiver minimamente aberto (ratio > 0.25)
-            if (currentRatio < 0.25) return;
-            
-            const sliceId = slice.getAttribute('id');
-            // Mapeia real-slice-top -> tooltip-real-top
-            const targetTooltipId = sliceId.replace('real-slice-', 'tooltip-real-');
-            const activeTooltip = document.getElementById(targetTooltipId);
-            
-            if (activeTooltip) {
-                // Remove active de outros
-                tooltips.forEach(t => t.classList.remove('active'));
-                // Ativa o tooltip correto
-                activeTooltip.classList.add('active');
+            if (window.matchMedia('(hover: hover)').matches) {
+                showTooltipForSlice(slice);
             }
         });
         
         slice.addEventListener('mouseleave', () => {
-            tooltips.forEach(t => t.classList.remove('active'));
+            if (window.matchMedia('(hover: hover)').matches) {
+                hideAllTooltips();
+            }
         });
+
+        slice.addEventListener('click', (e) => {
+            e.stopPropagation();
+            
+            const sliceId = slice.getAttribute('id');
+            const targetTooltipId = sliceId.replace('real-slice-', 'tooltip-real-');
+            const activeTooltip = document.getElementById(targetTooltipId);
+            
+            if (activeTooltip) {
+                const wasActive = activeTooltip.classList.contains('active');
+                hideAllTooltips();
+                if (!wasActive) {
+                    activeTooltip.classList.add('active');
+                }
+            }
+        });
+    });
+
+    function showTooltipForSlice(slice) {
+        const currentRatio = parseFloat(burgerContainer.style.getPropertyValue('--scroll-ratio') || 0);
+        if (currentRatio < 0.20) return;
+        
+        const sliceId = slice.getAttribute('id');
+        const targetTooltipId = sliceId.replace('real-slice-', 'tooltip-real-');
+        const activeTooltip = document.getElementById(targetTooltipId);
+        
+        if (activeTooltip) {
+            hideAllTooltips();
+            activeTooltip.classList.add('active');
+        }
+    }
+
+    function hideAllTooltips() {
+        tooltips.forEach(t => t.classList.remove('active'));
+    }
+
+    document.addEventListener('click', () => {
+        hideAllTooltips();
     });
 
     const burgerStickyWrapper = document.querySelector('.burger-sticky-wrapper');
     if (burgerStickyWrapper) {
         burgerStickyWrapper.addEventListener('mouseleave', () => {
-            tooltips.forEach(t => t.classList.remove('active'));
+            if (window.matchMedia('(hover: hover)').matches) {
+                hideAllTooltips();
+            }
         });
     }
 

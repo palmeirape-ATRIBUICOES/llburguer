@@ -1631,6 +1631,82 @@ ul {
         grid-template-columns: 1fr;
         gap: 16px;
     }
+
+    /* Ajuste do Hambúrguer Desconstruído no Celular/Tablet */
+    .burger-sticky-wrapper {
+        height: 380px;
+        max-width: 320px;
+        top: 80px;
+    }
+    
+    #real-slice-top { --displacement: -120; }
+    #real-slice-bacon { --displacement: -70; }
+    #real-slice-patty { --displacement: -10; }
+    #real-slice-salad { --displacement: 50; }
+    #real-slice-bottom { --displacement: 100; }
+
+    /* Tooltips centralizados e adaptados para mobile */
+    .burger-tooltip {
+        right: auto;
+        left: 50%;
+        bottom: -40px;
+        transform: translate(-50%, 20px) scale(0.9);
+        width: calc(100% - 32px);
+        max-width: 310px;
+        text-align: center;
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.85);
+        border-color: rgba(234, 179, 8, 0.4);
+    }
+    
+    .burger-tooltip::before {
+        display: none; /* remove seta lateral */
+    }
+    
+    .burger-tooltip.active {
+        opacity: 1;
+        transform: translate(-50%, 0) scale(1);
+        pointer-events: auto;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-title {
+        font-size: 2.3rem;
+    }
+    .kids-title {
+        font-size: 2.0rem;
+    }
+    .section-title {
+        font-size: 1.8rem;
+    }
+    .section-desc {
+        font-size: 0.85rem;
+    }
+    
+    .burger-sticky-wrapper {
+        height: 300px;
+        max-width: 260px;
+        top: 75px;
+    }
+    #real-slice-top { --displacement: -90; }
+    #real-slice-bacon { --displacement: -50; }
+    #real-slice-patty { --displacement: -5; }
+    #real-slice-salad { --displacement: 35; }
+    #real-slice-bottom { --displacement: 75; }
+    
+    .burger-tooltip {
+        bottom: -60px;
+        max-width: 270px;
+        padding: 12px;
+    }
+    .burger-tooltip h5 {
+        font-size: 1.1rem;
+        margin-bottom: 4px;
+    }
+    .burger-tooltip p {
+        font-size: 0.75rem;
+    }
 }
 
 /* --- DYNAMIC TRANSITIONS BACKGROUND (BRASA ANIMATION) --- */
