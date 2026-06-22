@@ -1,6 +1,6 @@
 import './menu.js';
-import realKidsAreaImg from './assets/real_kids_area.png';
-import kidsAreaImg from './assets/kids_area.png';
+const realKidsAreaImg = new URL('./assets/real_kids_area.png', import.meta.url).href;
+const kidsAreaImg = new URL('./assets/kids_area.png', import.meta.url).href;
 
 document.addEventListener('DOMContentLoaded', () => {
     // Forçar a página a carregar no topo e prevenir restauração automática do scroll do navegador
