@@ -407,13 +407,32 @@ document.addEventListener('DOMContentLoaded', () => {
         
         if (kMediaContainer) {
             let url = currentContent.kids.videoLink;
-            // Se for um link do Instagram/YouTube ou vídeo, filtramos e mostramos as imagens locais padrão
             let displayImg = realKidsAreaImg;
-            if (url && !url.includes('instagram.com') && !url.includes('youtube.com') && !url.includes('youtu.be') && !url.includes('.mp4') && !url.includes('stories/highlights')) {
-                displayImg = url;
-            }
+            let showBoth = true;
             
-            if (displayImg === "assets/real_kids_area.png" || displayImg === realKidsAreaImg) {
+            if (url) {
+                const isExternalVideo = url.includes('instagram.com') || 
+                                      url.includes('youtube.com') || 
+                                      url.includes('youtu.be') || 
+                                      url.includes('.mp4') || 
+                                      url.includes('stories/highlights');
+                
+                if (isExternalVideo) {
+                    displayImg = realKidsAreaImg;
+                    showBoth = true;
+                } else if (url.includes('real_kids_area.png')) {
+                    displayImg = realKidsAreaImg;
+                    showBoth = true;
+                } else if (url.includes('kids_area.png')) {
+                    displayImg = kidsAreaImg;
+                    showBoth = false;
+                } else {
+                    displayImg = url;
+                    showBoth = false;
+                }
+            }
+
+            if (showBoth) {
                 kMediaContainer.innerHTML = `
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
                         <div class="kids-image-wrapper">

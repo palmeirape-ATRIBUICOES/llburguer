@@ -1073,7 +1073,7 @@ body {
    RESPONSIVENESS
    ========================================================================== */
 
-@media (max-width: 991px) {
+@media (max-width: 1200px) {
     .hero-grid {
         grid-template-columns: 1fr;
         gap: 40px;
@@ -1175,7 +1175,8 @@ body {
         gap: 24px;
     }
     
-    .container {
+    .container,
+    .lab-container {
         padding: 0 16px;
     }
 }
