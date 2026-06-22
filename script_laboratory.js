@@ -1,6 +1,12 @@
 import './menu.js';
 
 document.addEventListener('DOMContentLoaded', () => {
+    // Forçar a página a carregar no topo e prevenir restauração automática do scroll do navegador
+    if ('scrollRestoration' in history) {
+        history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+
     // --- NAVBAR MOBILE TOGGLE ---
     const menuToggle = document.getElementById('menu-toggle');
     const navMenu = document.getElementById('nav-menu');

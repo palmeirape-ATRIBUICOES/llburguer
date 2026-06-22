@@ -1070,6 +1070,28 @@ body {
     .magazine-video-frame {
         margin: 0 auto;
     }
+
+    .editorial-double-frame {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        padding-bottom: 0;
+    }
+    
+    .frame-one {
+        width: 100% !important;
+        padding: 8px;
+    }
+    
+    .frame-two {
+        position: static !important;
+        width: 100% !important;
+        margin-top: 0;
+    }
+    
+    .story-overlay-card {
+        padding: 20px;
+    }
 }
 
 @media (max-width: 768px) {
