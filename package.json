@@ -1,0 +1,14 @@
+{
+  "name": "llburguer-website",
+  "version": "1.0.0",
+  "description": "Website premium para a hamburgueria LLBURGUER com animação de desconstrução de hambúrguer no scroll.",
+  "main": "index.html",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^4.4.5"
+  }
+}

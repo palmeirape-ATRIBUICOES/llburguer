@@ -1,0 +1,1123 @@
+/* ==========================================================================
+   GOURMET EDITORIAL / FINE DINING - DESIGN SYSTEM
+   ========================================================================== */
+
+:root {
+    --color-bg-light: #faf8f5;
+    --color-bg-card: #ffffff;
+    --color-bg-dark: #1f1d1a;
+    --color-primary: #bca374;
+    --color-primary-dark: #a28351;
+    --color-primary-light: #f3efe6;
+    --color-text-dark: #211f1c;
+    --color-text-muted: #6e675f;
+    --color-text-light: #f5f2eb;
+    --color-border: #ebdcd0;
+    --color-border-dark: #d8c3b1;
+    
+    --font-title: 'Playfair Display', Georgia, serif;
+    --font-body: 'Outfit', 'Inter', sans-serif;
+}
+
+/* Base Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-bg-light);
+    color: var(--color-text-dark);
+    font-family: var(--font-body);
+    font-size: 16px;
+    line-height: 1.6;
+    overflow-x: hidden;
+    position: relative;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* Container */
+.gourmet-container {
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Helper Typographies */
+.gourmet-tag {
+    display: inline-block;
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    color: var(--color-primary-dark);
+    letter-spacing: 2px;
+    margin-bottom: 16px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.gourmet-tag::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px;
+    height: 1px;
+    background-color: var(--color-primary-dark);
+}
+
+/* Buttons */
+.gourmet-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 2px;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+}
+
+.gourmet-btn-primary {
+    background-color: var(--color-primary);
+    color: #ffffff;
+    border: 1px solid var(--color-primary);
+}
+
+.gourmet-btn-primary:hover {
+    background-color: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(162, 131, 81, 0.15);
+}
+
+.gourmet-btn-secondary {
+    background-color: transparent;
+    color: var(--color-text-dark);
+    border: 1px solid var(--color-text-dark);
+}
+
+.gourmet-btn-secondary:hover {
+    background-color: var(--color-text-dark);
+    color: var(--color-bg-light);
+    transform: translateY(-1px);
+}
+
+.gourmet-btn-lg {
+    padding: 14px 36px;
+    font-size: 1rem;
+}
+
+.btn-sm {
+    padding: 8px 18px;
+    font-size: 0.85rem;
+}
+
+/* ==========================================================================
+   HEADER / NAVBAR
+   ========================================================================== */
+
+.gourmet-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(250, 248, 245, 0.95);
+    backdrop-filter: blur(8px);
+    border-bottom: 1px solid var(--color-border);
+    transition: all 0.3s ease;
+    height: 90px;
+}
+
+.gourmet-header.scrolled {
+    height: 75px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
+    background-color: rgba(250, 248, 245, 0.98);
+}
+
+.header-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 100%;
+}
+
+.gourmet-logo {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: var(--color-text-dark);
+    display: flex;
+    align-items: baseline;
+    gap: 4px;
+}
+
+.gourmet-logo span {
+    font-weight: 300;
+    color: var(--color-primary-dark);
+}
+
+.gourmet-logo small {
+    font-size: 0.8rem;
+    font-family: var(--font-title);
+    font-style: italic;
+    font-weight: 400;
+    color: var(--color-text-muted);
+}
+
+.gourmet-nav-list {
+    display: flex;
+    list-style: none;
+    gap: 32px;
+}
+
+.gourmet-nav-link {
+    text-decoration: none;
+    color: var(--color-text-muted);
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    padding: 5px 0;
+}
+
+.gourmet-nav-link:hover,
+.gourmet-nav-link.active {
+    color: var(--color-text-dark);
+}
+
+.gourmet-nav-link {
+    position: relative;
+}
+
+.gourmet-nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 1px;
+    background-color: var(--color-primary-dark);
+    transition: width 0.3s ease;
+}
+
+.gourmet-nav-link:hover::after,
+.gourmet-nav-link.active::after {
+    width: 100%;
+}
+
+.gourmet-header-actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+/* Menu Toggle */
+.gourmet-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 26px;
+    height: 18px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    z-index: 101;
+}
+
+.gourmet-bar {
+    width: 100%;
+    height: 2px;
+    background-color: var(--color-text-dark);
+    transition: all 0.3s ease;
+}
+
+/* ==========================================================================
+   HERO SECTION
+   ========================================================================== */
+
+.gourmet-hero {
+    min-height: 100vh;
+    padding-top: 140px;
+    padding-bottom: 80px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--color-border);
+    background: radial-gradient(circle at 10% 80%, rgba(188, 163, 116, 0.03) 0%, transparent 50%);
+}
+
+.hero-grid {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.hero-title {
+    font-family: var(--font-title);
+    font-size: 3.8rem;
+    font-weight: 300;
+    line-height: 1.15;
+    color: var(--color-text-dark);
+    margin-bottom: 24px;
+}
+
+.hero-title em {
+    font-style: italic;
+    font-family: var(--font-title);
+    font-weight: 400;
+    color: var(--color-primary-dark);
+}
+
+.hero-desc {
+    font-size: 1.05rem;
+    color: var(--color-text-muted);
+    margin-bottom: 36px;
+    max-width: 500px;
+    font-weight: 300;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Editorial Frame Showcase */
+.hero-frame-showcase {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.editorial-frame {
+    background-color: var(--color-bg-card);
+    padding: 16px 16px 24px 16px;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.03);
+    width: 100%;
+    max-width: 440px;
+}
+
+.editorial-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 16px;
+}
+
+.editorial-caption {
+    padding-top: 16px;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.editorial-caption span {
+    font-family: var(--font-title);
+    font-size: 1.1rem;
+    color: var(--color-text-dark);
+    font-weight: 600;
+}
+
+.editorial-caption small {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    color: var(--color-text-muted);
+}
+
+/* ==========================================================================
+   CARDAPIO SECTION (THE MENU)
+   ========================================================================== */
+
+.gourmet-section-cardapio {
+    padding: 100px 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.gourmet-section-header {
+    text-align: center;
+    margin-bottom: 60px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.gourmet-section-title {
+    font-family: var(--font-title);
+    font-size: 3rem;
+    font-weight: 300;
+    color: var(--color-text-dark);
+    margin-bottom: 12px;
+}
+
+.gourmet-section-desc {
+    max-width: 600px;
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    font-weight: 300;
+}
+
+/* Controls */
+.gourmet-menu-controls {
+    margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.gourmet-search-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+}
+
+.gourmet-search-wrapper i {
+    position: absolute;
+    left: 16px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--color-primary-dark);
+    font-size: 0.95rem;
+}
+
+.gourmet-search-wrapper input {
+    width: 100%;
+    background-color: var(--color-bg-light);
+    border: 1px solid var(--color-border);
+    border-radius: 2px;
+    color: var(--color-text-dark);
+    padding: 14px 18px 14px 44px;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+.gourmet-search-wrapper input:focus {
+    border-color: var(--color-primary-dark);
+    background-color: #ffffff;
+}
+
+/* Tabs */
+.gourmet-category-tabs {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+}
+
+.gourmet-category-tabs button,
+.category-tab-btn {
+    background-color: transparent;
+    border: none;
+    color: var(--color-text-muted);
+    font-family: var(--font-body);
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 8px 18px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border-bottom: 2px solid transparent;
+}
+
+.gourmet-category-tabs button:hover,
+.category-tab-btn:hover {
+    color: var(--color-text-dark);
+}
+
+.gourmet-category-tabs button.active,
+.category-tab-btn.active {
+    color: var(--color-primary-dark);
+    border-bottom-color: var(--color-primary);
+}
+
+/* Products Grid */
+.gourmet-products-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+    gap: 40px;
+    min-height: 250px;
+}
+
+/* Product Card */
+.menu-product-card {
+    background-color: #ffffff;
+    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    display: flex;
+    flex-direction: column;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 24px;
+}
+
+.product-image-wrapper {
+    position: relative;
+    width: 100%;
+    padding-top: 66.67%; /* 3:2 Aspect Ratio */
+    background-color: var(--color-bg-light);
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.product-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.menu-product-card:hover .product-img {
+    transform: scale(1.05);
+}
+
+.product-badge {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    background-color: var(--color-text-dark);
+    color: #ffffff;
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    padding: 4px 8px;
+    z-index: 1;
+    text-transform: uppercase;
+}
+
+.product-no-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: var(--color-border-dark);
+}
+
+.product-no-image i {
+    font-size: 2rem;
+}
+
+.product-no-image span {
+    font-family: var(--font-title);
+    font-style: italic;
+    font-size: 0.95rem;
+}
+
+.product-body {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.product-body h3 {
+    font-family: var(--font-title);
+    font-size: 1.45rem;
+    font-weight: 400;
+    color: var(--color-text-dark);
+    margin-bottom: 8px;
+    line-height: 1.2;
+}
+
+.product-desc {
+    font-size: 0.9rem;
+    color: var(--color-text-muted);
+    margin-bottom: 20px;
+    flex-grow: 1;
+    font-weight: 300;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.product-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: auto;
+    padding-top: 10px;
+}
+
+.product-price {
+    font-family: var(--font-title);
+    font-size: 1.45rem;
+    color: var(--color-text-dark);
+}
+
+/* ==========================================================================
+   STORY / ART / BASTIDORES
+   ========================================================================== */
+
+.gourmet-section-story {
+    padding: 100px 0;
+    background-color: var(--color-bg-light);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+/* Double Frame Layout style magazine */
+.story-image-column {
+    width: 100%;
+}
+
+.editorial-double-frame {
+    position: relative;
+    padding-bottom: 10%;
+}
+
+.frame-one {
+    border: 1px solid var(--color-border);
+    padding: 16px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    width: 85%;
+}
+
+.story-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.frame-two {
+    position: absolute;
+    bottom: -5%;
+    right: 0;
+    width: 60%;
+    z-index: 2;
+}
+
+.story-overlay-card {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    padding: 30px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.story-overlay-card h3 {
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin-bottom: 12px;
+    color: var(--color-primary);
+}
+
+.story-overlay-card p {
+    font-size: 0.85rem;
+    font-weight: 300;
+    line-height: 1.6;
+    color: #c9c5be;
+}
+
+.story-text-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.story-text-column .highlight-text {
+    font-family: var(--font-title);
+    font-size: 1.5rem;
+    font-style: italic;
+    color: var(--color-text-dark);
+    margin-bottom: 24px;
+    line-height: 1.4;
+}
+
+.story-text-column .normal-text {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.signature-quote {
+    border-top: 1px solid var(--color-border-dark);
+    border-bottom: 1px solid var(--color-border-dark);
+    padding: 24px 0;
+    width: 100%;
+}
+
+.signature-quote blockquote {
+    font-family: var(--font-title);
+    font-size: 1.4rem;
+    font-style: italic;
+    color: var(--color-text-dark);
+    margin-bottom: 8px;
+    line-height: 1.4;
+}
+
+.signature-quote cite {
+    font-family: var(--font-body);
+    font-size: 0.8rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--color-primary-dark);
+    font-style: normal;
+}
+
+/* ==========================================================================
+   KIDS / FAMILIA SECTION
+   ========================================================================== */
+
+.gourmet-section-kids {
+    padding: 100px 0;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--color-border);
+}
+
+.kids-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 80px;
+    align-items: center;
+}
+
+.kids-text-column {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.kids-text-column .highlight-text {
+    font-size: 1.3rem;
+    color: var(--color-text-dark);
+    margin-bottom: 20px;
+    font-weight: 400;
+}
+
+.kids-text-column .normal-text {
+    font-size: 1rem;
+    color: var(--color-text-muted);
+    margin-bottom: 30px;
+    font-weight: 300;
+}
+
+.kids-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    width: 100%;
+}
+
+.kh-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.kh-num {
+    font-family: var(--font-title);
+    font-size: 1.8rem;
+    font-weight: 300;
+    color: var(--color-primary);
+    line-height: 1;
+    margin-top: 4px;
+}
+
+.kh-item h4 {
+    font-family: var(--font-title);
+    font-size: 1.15rem;
+    font-weight: 600;
+    color: var(--color-text-dark);
+    margin-bottom: 4px;
+}
+
+.kh-item p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    line-height: 1.5;
+    font-weight: 300;
+}
+
+/* Magazine Video Frame */
+.kids-media-column {
+    width: 100%;
+}
+
+.magazine-video-frame {
+    border: 1px solid var(--color-border);
+    padding: 16px;
+    background-color: var(--color-bg-light);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    position: relative;
+    width: 100%;
+    max-width: 440px;
+    margin-left: auto;
+}
+
+.kids-magazine-video {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 3/4;
+    object-fit: cover;
+}
+
+.video-instagram-button {
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+.video-instagram-button .gourmet-btn {
+    width: 100%;
+}
+
+/* ==========================================================================
+   STORES / NOSSAS LOJAS
+   ========================================================================== */
+
+.gourmet-section-stores {
+    padding: 100px 0;
+    background-color: var(--color-bg-light);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.gourmet-stores-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.gourmet-store-card {
+    background-color: #ffffff;
+    border: 1px solid var(--color-border);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.02);
+    display: flex;
+    flex-direction: column;
+    transition: all 0.3s ease;
+}
+
+.gourmet-store-card:hover {
+    border-color: var(--color-border-dark);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.04);
+}
+
+.gourmet-store-body {
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    flex-grow: 1;
+}
+
+.store-badge-status {
+    align-self: flex-start;
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    padding: 4px 8px;
+    border: 1px solid var(--color-primary);
+    color: var(--color-primary-dark);
+}
+
+.gourmet-store-body h3 {
+    font-family: var(--font-title);
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--color-text-dark);
+    margin-bottom: 4px;
+}
+
+.store-address,
+.store-hours {
+    font-size: 0.95rem;
+    color: var(--color-text-muted);
+    font-weight: 300;
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+}
+
+.store-address i,
+.store-hours i {
+    color: var(--color-primary-dark);
+    margin-top: 4px;
+}
+
+.store-amenities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.store-amenities span {
+    font-family: var(--font-body);
+    font-size: 9px;
+    font-weight: 500;
+    background-color: var(--color-bg-light);
+    border: 1px solid var(--color-border);
+    padding: 4px 10px;
+    color: var(--color-text-dark);
+    text-transform: uppercase;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.gourmet-store-footer {
+    padding: 20px 30px;
+    border-top: 1px solid var(--color-border);
+    background-color: var(--color-bg-light);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
+
+/* ==========================================================================
+   FOOTER
+   ========================================================================== */
+
+.gourmet-footer {
+    background-color: var(--color-bg-dark);
+    color: var(--color-text-light);
+    padding-top: 80px;
+}
+
+.footer-grid {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr 1fr;
+    gap: 60px;
+    margin-bottom: 60px;
+}
+
+.footer-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.footer-brand .gourmet-logo {
+    color: #ffffff;
+}
+
+.footer-brand p {
+    font-size: 0.95rem;
+    color: #a7a29c;
+    line-height: 1.6;
+    max-width: 400px;
+    font-weight: 300;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 12px;
+}
+
+.footer-socials a {
+    width: 38px;
+    height: 38px;
+    border: 1px solid #4a453f;
+    border-radius: 50%;
+    color: var(--color-text-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.footer-socials a:hover {
+    border-color: var(--color-primary);
+    color: var(--color-primary);
+}
+
+.footer-links h4,
+.footer-contact h4 {
+    font-family: var(--font-title);
+    font-size: 1.25rem;
+    font-weight: 400;
+    color: #ffffff;
+    margin-bottom: 24px;
+    letter-spacing: 0.5px;
+}
+
+.footer-links ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-links ul a {
+    text-decoration: none;
+    color: #a7a29c;
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.footer-links ul a:hover {
+    color: var(--color-primary);
+}
+
+.footer-contact {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.footer-contact p {
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #a7a29c;
+    font-weight: 300;
+}
+
+.footer-contact p i {
+    color: var(--color-primary);
+}
+
+.footer-bottom {
+    border-top: 1px solid #2d2a25;
+    padding: 30px 0;
+    text-align: center;
+    font-size: 0.85rem;
+    color: #6e6860;
+    font-weight: 300;
+}
+
+/* ==========================================================================
+   RESPONSIVENESS
+   ========================================================================== */
+
+@media (max-width: 991px) {
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .hero-content {
+        align-items: center;
+    }
+    
+    .hero-title {
+        font-size: 3rem;
+    }
+    
+    .hero-frame-showcase {
+        justify-content: center;
+    }
+    
+    .story-grid,
+    .kids-grid {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+    
+    .kids-text-column {
+        order: 1;
+    }
+    .kids-media-column {
+        order: 2;
+    }
+    
+    .magazine-video-frame {
+        margin: 0 auto;
+    }
+}
+
+@media (max-width: 768px) {
+    .gourmet-header {
+        height: 80px;
+    }
+    
+    .gourmet-menu-toggle {
+        display: flex;
+    }
+    
+    .gourmet-nav {
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 80px);
+        background-color: var(--color-bg-light);
+        border-top: 1px solid var(--color-border);
+        transition: left 0.3s ease;
+        padding: 40px 24px;
+        z-index: 99;
+    }
+    
+    .gourmet-nav.open {
+        left: 0;
+    }
+    
+    .gourmet-nav-list {
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
+    }
+    
+    .gourmet-nav-link {
+        font-size: 1.2rem;
+    }
+    
+    .header-cta {
+        display: none;
+    }
+    
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .gourmet-section-title {
+        font-size: 2.4rem;
+    }
+}

@@ -1,0 +1,891 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLBURGUER | Hamburgueria Artesanal de Verdade</title>
+    
+    <!-- Meta Tags para SEO -->
+    <meta name="description" content="Experimente os melhores hambúrgueres artesanais na LLBURGUER. Blend Angus suculento grelhado na chapa, bacon crocante, área kids integrada e espaço perfeito para a família.">
+    <meta name="keywords" content="hambúrguer artesanal, llburguer, hamburgueria, blend angus, espaço kids, restaurante família, churrasco">
+    <meta name="author" content="LLBURGUER">
+    
+    <!-- Open Graph (Facebook/Instagram share) -->
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="LLBURGUER | Hamburgueria Artesanal de Verdade">
+    <meta property="og:description" content="Hambúrgueres premium de alta qualidade, queijo derretido e a melhor Área Kids para a família.">
+    <meta property="og:image" content="assets/real_signature_burger.png">
+    
+    <!-- Google Fonts: Outfit (títulos gourmet), Bebas Neue e Inter (corpo) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700;800&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link para o CSS principal -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Camada de Background Animado -->
+    <div class="animated-bg-overlay">
+        <div class="floating-background-container"></div>
+    </div>
+
+    <!-- Navbar -->
+    <header class="header" id="header">
+        <div class="nav-container">
+            <a href="#hero" class="logo" id="nav-logo">
+                <img src="https://storage.googleapis.com/prod-cardapio-web/uploads/company/logo/27488/2a75ae63LOGO_LL.jpg" alt="LLBURGUER Logo" class="logo-img">
+                <span class="logo-text"><span class="logo-accent">LL</span>BURGUER</span>
+            </a>
+              <nav class="nav-menu" id="nav-menu">
+                <ul class="nav-list">
+                    <li><a href="#hero" class="nav-link active" id="link-hero">Início</a></li>
+                    <li><a href="#destaques" class="nav-link" id="link-destaques">Destaques</a></li>
+                    <li><a href="#cardapio" class="nav-link" id="link-cardapio">Cardápio</a></li>
+                    <li><a href="#area-kids" class="nav-link" id="link-area-kids">Área Kids</a></li>
+                    <li><a href="#nossas-lojas" class="nav-link" id="link-nossas-lojas">Nossas Lojas</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-actions">
+                <a href="https://wa.me/5521965243034?text=Olá!%20Gostaria%20de%20pedir%20um%20hambúrguer%20artesanal." target="_blank" class="btn btn-primary" id="btn-pedir-nav">
+                    <i class="fa-brands fa-whatsapp"></i> Pedir no WhatsApp
+                </a>
+                <button class="menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+ 
+    <main>
+        <!-- Hero Section Premium -->
+        <section class="hero" id="hero">
+            <div class="hero-container">
+                <!-- Coluna 1: Texto, Ações e Destaques (2/3 da tela) -->
+                <div class="hero-text-content">
+                    <span class="hero-badge"><i class="fa-solid fa-fire-flame-curved"></i> <span id="editable-hero-badge">Fogo, Chapa e Suculência</span></span>
+                    <h1 class="hero-title" id="editable-hero-title">O SABOR REAL QUE <br><span class="text-gradient">DOMINA A CHAPA</span></h1>
+                    <p class="hero-description" id="editable-hero-description">
+                        Sem firulas, sem frescura. Hambúrgueres premium grelhados com a maestria que você vê no nosso Instagram. Saboreie a verdadeira qualidade artesanal.
+                    </p>
+                    <div class="hero-actions">
+                        <a href="#destaques" class="btn btn-large btn-primary" id="btn-pedir-hero">
+                            <i class="fa-solid fa-burger"></i> Ver Destaques
+                        </a>
+                        <a href="#area-kids" class="btn btn-large btn-secondary" id="btn-conhecer-hero">
+                            Espaço Kids
+                        </a>
+                    </div>
+                    
+                    <!-- Destaques Rápidos posicionados abaixo dos botões -->
+                    <div class="hero-features">
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fa-solid fa-cookie"></i></div>
+                            <div>
+                                <h4>Pão Brioche Moderno</h4>
+                                <p>Brilho na manteiga de verdade</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon"><i class="fa-solid fa-child-reaching"></i></div>
+                            <div>
+                                <h4>Espaço Kids Moderno</h4>
+                                <p>Segurança e diversão integrada</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna 2: Showcase do Instagram (1/3 da tela) -->
+                <div class="burger-showcase">
+                    <div class="hero-instagram-card">
+                        <iframe src="https://www.instagram.com/llburgeroficial/embed/" class="instagram-profile-iframe" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Destaques da Casa -->
+        <section class="menu-highlights" id="destaques">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle" id="editable-destaques-subtitle">Os Mais Pedidos</span>
+                    <h2 class="section-title" id="editable-destaques-title">DESTAQUES DA CASA</h2>
+                    <p class="section-desc" id="editable-destaques-desc">Hambúrgueres de assinatura elogiados e filmados no Instagram. Escolha o seu e faça o pedido direto pelo WhatsApp!</p>
+                </div>
+                
+                <div class="highlights-grid">
+                    <!-- Item 1: LL Angus Double -->
+                    <div class="menu-highlight-card">
+                        <div class="card-image-wrapper">
+                            <div class="card-media-box" id="editable-card1-media">
+                                <img src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/2858028/f89e8abd664cfab021a0b.png" alt="LL Angus Double" class="highlight-img" id="editable-card1-img">
+                            </div>
+                            <span class="card-badge" id="editable-card1-badge">Mais Vendido</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 id="editable-card1-title">LL Angus Double</h3>
+                            <p class="burger-ingredients" id="editable-card1-desc">Duplo Angus de 180g (2x blend de 90g), cheddar duplo super cremoso e bacon crocante no pão brioche amanteigado.</p>
+                            <div class="card-footer">
+                                <span class="highlight-price" id="editable-card1-price">R$ 38,00</span>
+                                <a href="https://wa.me/5521965243034?text=Olá!%20Gostaria%20de%20pedir%20o%20lanche%20LL%20Angus%20Double%20de%20R$%2038,00." target="_blank" class="btn btn-primary btn-sm" id="editable-card1-link">
+                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 2: Bacon Lover -->
+                    <div class="menu-highlight-card">
+                        <div class="card-image-wrapper">
+                            <div class="card-media-box" id="editable-card2-media">
+                                <img src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/2858012/894923c968508f13d6db1.png" alt="Bacon Lover" class="highlight-img" id="editable-card2-img">
+                            </div>
+                            <span class="card-badge" id="editable-card2-badge">Favorito de Bacon</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 id="editable-card2-title">Bacon Lover</h3>
+                            <p class="burger-ingredients" id="editable-card2-desc">Blend Angus de 150g suculento na chapa, muito cheddar legítimo derretido, tiras crocantes de bacon e maionese artesanal da casa.</p>
+                            <div class="card-footer">
+                                <span class="highlight-price" id="editable-card2-price">R$ 34,00</span>
+                                <a href="https://wa.me/5521965243034?text=Olá!%20Gostaria%20de%20pedir%20o%20lanche%20Bacon%20Lover%20de%20R$%2034,00." target="_blank" class="btn btn-primary btn-sm" id="editable-card2-link">
+                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 3: Smash Cheddar -->
+                    <div class="menu-highlight-card">
+                        <div class="card-image-wrapper">
+                            <div class="card-media-box" id="editable-card3-media">
+                                <img src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/3329806/48875dc5smash.jpg" alt="Smash Cheddar" class="highlight-img" id="editable-card3-img">
+                            </div>
+                            <span class="card-badge" id="editable-card3-badge">Prensado na Chapa</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 id="editable-card3-title">Smash Cheddar</h3>
+                            <p class="burger-ingredients" id="editable-card3-desc">Blend Smash 90g prensado na chapa com cebola picada, queijo cheddar derretido e molho especial.</p>
+                            <div class="card-footer">
+                                <span class="highlight-price" id="editable-card3-price">R$ 28,00</span>
+                                <a href="https://wa.me/5521965243034?text=Olá!%20Gostaria%20de%20pedir%20o%20lanche%20Smash%20Cheddar%20de%20R$%2028,00." target="_blank" class="btn btn-primary btn-sm" id="editable-card3-link">
+                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Item 4: Combo Kids -->
+                    <div class="menu-highlight-card">
+                        <div class="card-image-wrapper">
+                            <div class="card-media-box" id="editable-card4-media">
+                                <img src="https://storage.googleapis.com/prod-cardapio-web/uploads/item/image/2858022/ada2c4a5664cb19c8d27e.png" alt="Combo Kids" class="highlight-img" id="editable-card4-img">
+                            </div>
+                            <span class="card-badge" id="editable-card4-badge">Especial Kids</span>
+                        </div>
+                        <div class="card-body">
+                            <h3 id="editable-card4-title">Combo Kids</h3>
+                            <p class="burger-ingredients" id="editable-card4-desc">Hambúrguer clássico com queijo derretido, porção individual de fritas fininhas e suco natural de laranja espremido na hora.</p>
+                            <div class="card-footer">
+                                <span class="highlight-price" id="editable-card4-price">R$ 25,00</span>
+                                <a href="https://wa.me/5521965243034?text=Olá!%20Gostaria%20de%20pedir%20o%20Combo%20Kids%20de%20R$%2025,00." target="_blank" class="btn btn-primary btn-sm" id="editable-card4-link">
+                                    <i class="fa-brands fa-whatsapp"></i> Pedir
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Cardápio Completo -->
+        <section class="full-menu-section" id="cardapio">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Escolha o seu</span>
+                    <h2 class="section-title">NOSSO CARDÁPIO COMPLETO</h2>
+                    <p class="section-desc">Burgers suculentos, combos brutais, batatas sequinhas, espetinhos e bebidas. Tudo preparado na hora para você!</p>
+                </div>
+                
+                <!-- Barra de Busca e Filtros -->
+                <div class="menu-controls">
+                    <div class="search-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="menu-search-input" placeholder="Buscar no cardápio... (ex: duplo, bacon, stella)">
+                    </div>
+                    
+                    <div class="category-tabs" id="menu-category-tabs">
+                        <!-- Gerado dinamicamente via JS -->
+                    </div>
+                </div>
+
+                <!-- Grid de Produtos -->
+                <div class="menu-products-grid" id="menu-products-grid">
+                    <!-- Gerado dinamicamente via JS -->
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Seção Área Kids -->
+        <section class="area-kids" id="area-kids">
+            <div class="area-kids-glow-decor"></div>
+            <div class="container">
+                <div class="kids-grid">
+                    <div class="kids-text-content">
+                        <span class="kids-badge"><i class="fa-solid fa-face-smile"></i> <span id="editable-kids-badge">Espaço Kids Integrado</span></span>
+                        <h2 class="kids-title" id="editable-kids-title">DIVERSÃO PARA ELES, <br><span class="text-gradient-kids">TRANQUILIDADE PARA VOCÊ</span></h2>
+                        <p class="kids-desc" id="editable-kids-desc1">
+                            Na LLBURGUER, acreditamos que comer fora deve ser um prazer para todos. Pensando nisso, integramos uma incrível área infantil aconchegante e totalmente segura diretamente ao nosso salão de refeições.
+                        </p>
+                        <p class="kids-desc" id="editable-kids-desc2">
+                            Nosso **Espaço Kids** conta com brinquedos em madeira, escorregadores, espaço de colorir e jogos dinâmicos. O espaço é posicionado de forma estratégica para que os pais mantenham visibilidade completa a partir de mesas confortáveis, permitindo saborear um burger quentinho enquanto os filhos brincam à vontade.
+                        </p>
+                        
+                        <ul class="kids-features-list">
+                            <li><i class="fa-solid fa-check"></i> Monitoramento visual fácil a partir de qualquer mesa do salão</li>
+                            <li><i class="fa-solid fa-check"></i> Brinquedos seguros, ecológicos e higienizados</li>
+                            <li><i class="fa-solid fa-check"></i> Piso acolhedor para conforto das crianças</li>
+                            <li><i class="fa-solid fa-check"></i> Monitores nos finais de semana para diversão segura</li>
+                        </ul>
+                        
+                        <div class="kids-action-container">
+                            <a href="#nossas-lojas" class="btn btn-kids">
+                                <i class="fa-solid fa-location-dot"></i> Conhecer Nossas Lojas
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div class="kids-image-content" id="editable-kids-media-container">
+                        <div class="kids-image-wrapper">
+                            <img src="assets/real_kids_area.png" alt="Área Kids LLBURGUER" class="kids-img" id="editable-kids-img">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Nossas Lojas -->
+        <section class="nossas-lojas" id="nossas-lojas">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle">Nossos Espaços</span>
+                    <h2 class="section-title">VENHA SENTIR O CHEIRO DE CHAPA QUENTE</h2>
+                </div>
+                
+                <div class="stores-grid" id="dynamic-stores-grid">
+                    <!-- Filiais geradas dinamicamente via JS -->
+                </div>
+            </div>
+        </section>
+        
+        <!-- Seção Feed do Instagram -->
+        <section class="instagram-feed" id="instagram-feed">
+            <div class="container">
+                <div class="section-header">
+                    <span class="section-subtitle"><i class="fa-brands fa-instagram"></i> @llburgeroficial</span>
+                    <h2 class="section-title">NOSSO FEED AO VIVO DO INSTAGRAM</h2>
+                    <p class="section-desc">Acompanhe nossas postagens e vídeos reais diretamente do Instagram da LLBURGUER.</p>
+                </div>
+                
+                <div class="instagram-embed-container">
+                    <iframe src="https://www.instagram.com/llburgeroficial/embed/" class="instagram-feed-iframe" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-brand">
+                <a href="#hero" class="logo">
+                    <span class="logo-accent">LL</span>BURGUER
+                </a>
+                <p>O hambúrguer artesanal definitivo. Suculência, chapa quente, ingredientes de primeira e diversão garantida para toda a família em um espaço moderno e aconchegante.</p>
+                <div class="social-links">
+                    <a href="https://www.instagram.com/llburgeroficial/" target="_blank" aria-label="Acesse nosso Instagram" id="social-instagram">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="https://wa.me/5521965243034" target="_blank" aria-label="Acesse nosso WhatsApp" id="social-whatsapp">
+                        <i class="fa-brands fa-whatsapp"></i>
+                    </a>
+                    <a href="#" id="admin-login-trigger" class="admin-trigger-link" title="Área Administrativa">
+                        <i class="fa-solid fa-lock"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#destaques">Destaques</a></li>
+                    <li><a href="#cardapio">Cardápio</a></li>
+                    <li><a href="#area-kids">Area Kids</a></li>
+                    <li><a href="#nossas-lojas">Nossas Lojas</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Chame no Delivery</h4>
+                <p><i class="fa-solid fa-phone"></i> (21) 96524-3034</p>
+                <p><i class="fa-solid fa-envelope"></i> contato@llburguer.com.br</p>
+                <p><i class="fa-solid fa-location-dot"></i> R. Damas Batista, 947 - Jardim Tropical</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="container">
+                <p>&copy; 2026 LLBURGUER. Todos os direitos reservados. Feito na chapa quente.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal de Login do Admin -->
+    <div class="admin-modal" id="admin-login-modal">
+        <div class="admin-modal-content">
+            <button class="modal-close" id="admin-login-close">&times;</button>
+            <h3><i class="fa-solid fa-shield-halved"></i> Painel Administrativo</h3>
+            <p>Insira a senha de administrador para acessar as configurações.</p>
+            <div class="form-group">
+                <input type="password" id="admin-password-input" placeholder="Senha do Administrador">
+                <span class="error-message" id="admin-login-error">Senha incorreta. Tente novamente.</span>
+            </div>
+            <button class="btn btn-primary btn-block" id="admin-login-submit">Entrar</button>
+        </div>
+    </div>
+
+    <!-- Gaveta Administrativa (Drawer) -->
+    <div class="admin-drawer" id="admin-dashboard-drawer">
+        <div class="drawer-header">
+            <h3><i class="fa-solid fa-sliders"></i> Painel de Edição</h3>
+            <button class="drawer-close" id="admin-drawer-close">&times;</button>
+        </div>
+        <div class="drawer-body">
+            <!-- Tabs de Navegação -->
+            <div class="drawer-tabs">
+                <button class="tab-btn active" data-tab="tab-hero">Hero</button>
+                <button class="tab-btn" data-tab="tab-destaques">Destaques</button>
+                <button class="tab-btn" data-tab="tab-kids">Área Kids</button>
+                <button class="tab-btn" data-tab="tab-style">Aparência</button>
+                <button class="tab-btn" data-tab="tab-animations">Fundo Animado</button>
+                <button class="tab-btn" data-tab="tab-stores">Lojas & Contatos</button>
+                <button class="tab-btn" data-tab="tab-config">Sistema</button>
+            </div>
+
+            <!-- Conteúdo das Tabs -->
+            <!-- Tab Hero -->
+            <div class="tab-content active" id="tab-hero">
+                <div class="form-group">
+                    <label>Badge do Hero</label>
+                    <input type="text" id="input-hero-badge">
+                </div>
+                <div class="form-group">
+                    <label>Título do Hero</label>
+                    <div class="text-toolbar" data-for="input-hero-title">
+                        <button type="button" class="toolbar-btn" data-tag="b" title="Negrito"><i class="fa-solid fa-bold"></i></button>
+                        <button type="button" class="toolbar-btn" data-tag="i" title="Itálico"><i class="fa-solid fa-italic"></i></button>
+                        <button type="button" class="toolbar-btn" data-tag="u" title="Sublinhado"><i class="fa-solid fa-underline"></i></button>
+                    </div>
+                    <textarea id="input-hero-title" rows="2"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Descrição do Hero</label>
+                    <div class="text-toolbar" data-for="input-hero-desc">
+                        <button type="button" class="toolbar-btn" data-tag="b" title="Negrito"><i class="fa-solid fa-bold"></i></button>
+                        <button type="button" class="toolbar-btn" data-tag="i" title="Itálico"><i class="fa-solid fa-italic"></i></button>
+                        <button type="button" class="toolbar-btn" data-tag="u" title="Sublinhado"><i class="fa-solid fa-underline"></i></button>
+                    </div>
+                    <textarea id="input-hero-desc" rows="4"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Texto do Botão Principal (WhatsApp)</label>
+                    <input type="text" id="input-hero-cta">
+                </div>
+                <div class="form-group">
+                    <label>Texto do Botão Secundário</label>
+                    <input type="text" id="input-hero-cta-sec">
+                </div>
+            </div>
+
+            <!-- Tab Destaques -->
+            <div class="tab-content" id="tab-destaques">
+                <div class="form-group">
+                    <label>Título da Seção</label>
+                    <input type="text" id="input-destaques-title">
+                </div>
+                <div class="form-group">
+                    <label>Subtítulo da Seção</label>
+                    <input type="text" id="input-destaques-subtitle">
+                </div>
+                <div class="form-group">
+                    <label>Descrição da Seção</label>
+                    <div class="text-toolbar" data-for="input-destaques-desc">
+                        <button type="button" class="toolbar-btn" data-tag="b" title="Negrito"><i class="fa-solid fa-bold"></i></button>
+                        <button type="button" class="toolbar-btn" data-tag="i" title="Itálico"><i class="fa-solid fa-italic"></i></button>
+                        <button type="button" class="toolbar-btn" data-tag="u" title="Sublinhado"><i class="fa-solid fa-underline"></i></button>
+                    </div>
+                    <textarea id="input-destaques-desc" rows="2"></textarea>
+                </div>
+                
+                <div class="drawer-divider">Produtos</div>
+                
+                <div class="accordion">
+                    <!-- Produto 1 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">1. LL Angus Double <i class="fa-solid fa-chevron-down"></i></div>
+                        <div class="accordion-body">
+                            <div class="form-group">
+                                <label>Badge</label>
+                                <input type="text" id="input-card1-badge">
+                            </div>
+                            <div class="form-group">
+                                <label>Nome</label>
+                                <input type="text" id="input-card1-title">
+                            </div>
+                            <div class="form-group">
+                                <label>Preço</label>
+                                <input type="text" id="input-card1-price">
+                            </div>
+                            <div class="form-group">
+                                <label>Imagem / Vídeo (URL YouTube/Instagram)</label>
+                                <div class="image-input-wrapper">
+                                    <input type="text" id="input-card1-img" placeholder="Caminho local ou Link YouTube/Instagram">
+                                    <input type="file" id="file-card1" accept="image/*" class="admin-file-input" style="display: none;">
+                                    <button type="button" class="btn btn-secondary btn-sm upload-btn" data-target="file-card1"><i class="fa-solid fa-upload"></i> Upload</button>
+                                </div>
+                                <div class="image-gallery-picker">
+                                    <span class="gallery-picker-title">Ou escolha uma foto real:</span>
+                                    <div class="gallery-thumbnails">
+                                        <img src="assets/real_signature_burger.png" class="gallery-thumb" data-target="input-card1-img" title="Burger Artesanal Real">
+                                        <img src="assets/real_kids_area.png" class="gallery-thumb" data-target="input-card1-img" title="Área Kids Real">
+                                        <img src="assets/real_store_interior.png" class="gallery-thumb" data-target="input-card1-img" title="Interior da Loja Real">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Ingredientes</label>
+                                <div class="text-toolbar" data-for="input-card1-desc">
+                                    <button type="button" class="toolbar-btn" data-tag="b" title="Negrito"><i class="fa-solid fa-bold"></i></button>
+                                    <button type="button" class="toolbar-btn" data-tag="i" title="Itálico"><i class="fa-solid fa-italic"></i></button>
+                                    <button type="button" class="toolbar-btn" data-tag="u" title="Sublinhado"><i class="fa-solid fa-underline"></i></button>
+                                </div>
+                                <textarea id="input-card1-desc" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produto 2 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">2. Bacon Lover <i class="fa-solid fa-chevron-down"></i></div>
+                        <div class="accordion-body">
+                            <div class="form-group">
+                                <label>Badge</label>
+                                <input type="text" id="input-card2-badge">
+                            </div>
+                            <div class="form-group">
+                                <label>Nome</label>
+                                <input type="text" id="input-card2-title">
+                            </div>
+                            <div class="form-group">
+                                <label>Preço</label>
+                                <input type="text" id="input-card2-price">
+                            </div>
+                            <div class="form-group">
+                                <label>Imagem / Vídeo (URL YouTube/Instagram)</label>
+                                <div class="image-input-wrapper">
+                                    <input type="text" id="input-card2-img" placeholder="Caminho local ou Link YouTube/Instagram">
+                                    <input type="file" id="file-card2" accept="image/*" class="admin-file-input" style="display: none;">
+                                    <button type="button" class="btn btn-secondary btn-sm upload-btn" data-target="file-card2"><i class="fa-solid fa-upload"></i> Upload</button>
+                                </div>
+                                <div class="image-gallery-picker">
+                                    <span class="gallery-picker-title">Ou escolha uma foto real:</span>
+                                    <div class="gallery-thumbnails">
+                                        <img src="assets/real_signature_burger.png" class="gallery-thumb" data-target="input-card2-img" title="Burger Artesanal Real">
+                                        <img src="assets/real_kids_area.png" class="gallery-thumb" data-target="input-card2-img" title="Área Kids Real">
+                                        <img src="assets/real_store_interior.png" class="gallery-thumb" data-target="input-card2-img" title="Interior da Loja Real">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Ingredientes</label>
+                                <div class="text-toolbar" data-for="input-card2-desc">
+                                    <button type="button" class="toolbar-btn" data-tag="b" title="Negrito"><i class="fa-solid fa-bold"></i></button>
+                                    <button type="button" class="toolbar-btn" data-tag="i" title="Itálico"><i class="fa-solid fa-italic"></i></button>
+                                    <button type="button" class="toolbar-btn" data-tag="u" title="Sublinhado"><i class="fa-solid fa-underline"></i></button>
+                                </div>
+                                <textarea id="input-card2-desc" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produto 3 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">3. Smash Cheddar <i class="fa-solid fa-chevron-down"></i></div>
+                        <div class="accordion-body">
+                            <div class="form-group">
+                                <label>Badge</label>
+                                <input type="text" id="input-card3-badge">
+                            </div>
+                            <div class="form-group">
+                                <label>Nome</label>
+                                <input type="text" id="input-card3-title">
+                            </div>
+                            <div class="form-group">
+                                <label>Preço</label>
+                                <input type="text" id="input-card3-price">
+                            </div>
+                            <div class="form-group">
+                                <label>Imagem / Vídeo (URL YouTube/Instagram)</label>
+                                <div class="image-input-wrapper">
+                                    <input type="text" id="input-card3-img" placeholder="Caminho local ou Link YouTube/Instagram">
+                                    <input type="file" id="file-card3" accept="image/*" class="admin-file-input" style="display: none;">
+                                    <button type="button" class="btn btn-secondary btn-sm upload-btn" data-target="file-card3"><i class="fa-solid fa-upload"></i> Upload</button>
+                                </div>
+                                <div class="image-gallery-picker">
+                                    <span class="gallery-picker-title">Ou escolha uma foto real:</span>
+                                    <div class="gallery-thumbnails">
+                                        <img src="assets/real_signature_burger.png" class="gallery-thumb" data-target="input-card3-img" title="Burger Artesanal Real">
+                                        <img src="assets/real_kids_area.png" class="gallery-thumb" data-target="input-card3-img" title="Área Kids Real">
+                                        <img src="assets/real_store_interior.png" class="gallery-thumb" data-target="input-card3-img" title="Interior da Loja Real">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Ingredientes</label>
+                                <div class="text-toolbar" data-for="input-card3-desc">
+                                    <button type="button" class="toolbar-btn" data-tag="b" title="Negrito"><i class="fa-solid fa-bold"></i></button>
+                                    <button type="button" class="toolbar-btn" data-tag="i" title="Itálico"><i class="fa-solid fa-italic"></i></button>
+                                    <button type="button" class="toolbar-btn" data-tag="u" title="Sublinhado"><i class="fa-solid fa-underline"></i></button>
+                                </div>
+                                <textarea id="input-card3-desc" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Produto 4 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">4. Combo Kids <i class="fa-solid fa-chevron-down"></i></div>
+                        <div class="accordion-body">
+                            <div class="form-group">
+                                <label>Badge</label>
+                                <input type="text" id="input-card4-badge">
+                            </div>
+                            <div class="form-group">
+                                <label>Nome</label>
+                                <input type="text" id="input-card4-title">
+                            </div>
+                            <div class="form-group">
+                                <label>Preço</label>
+                                <input type="text" id="input-card4-price">
+                            </div>
+                            <div class="form-group">
+                                <label>Imagem / Vídeo (URL YouTube/Instagram)</label>
+                                <div class="image-input-wrapper">
+                                    <input type="text" id="input-card4-img" placeholder="Caminho local ou Link YouTube/Instagram">
+                                    <input type="file" id="file-card4" accept="image/*" class="admin-file-input" style="display: none;">
+                                    <button type="button" class="btn btn-secondary btn-sm upload-btn" data-target="file-card4"><i class="fa-solid fa-upload"></i> Upload</button>
+                                </div>
+                                <div class="image-gallery-picker">
+                                    <span class="gallery-picker-title">Ou escolha uma foto real:</span>
+                                    <div class="gallery-thumbnails">
+                                        <img src="assets/real_signature_burger.png" class="gallery-thumb" data-target="input-card4-img" title="Burger Artesanal Real">
+                                        <img src="assets/real_kids_area.png" class="gallery-thumb" data-target="input-card4-img" title="Área Kids Real">
+                                        <img src="assets/real_store_interior.png" class="gallery-thumb" data-target="input-card4-img" title="Interior da Loja Real">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label>Ingredientes</label>
+                                <div class="text-toolbar" data-for="input-card4-desc">
+                                    <button type="button" class="toolbar-btn" data-tag="b" title="Negrito"><i class="fa-solid fa-bold"></i></button>
+                                    <button type="button" class="toolbar-btn" data-tag="i" title="Itálico"><i class="fa-solid fa-italic"></i></button>
+                                    <button type="button" class="toolbar-btn" data-tag="u" title="Sublinhado"><i class="fa-solid fa-underline"></i></button>
+                                </div>
+                                <textarea id="input-card4-desc" rows="3"></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Kids -->
+            <div class="tab-content" id="tab-kids">
+                <div class="form-group">
+                    <label>Badge do Kids</label>
+                    <input type="text" id="input-kids-badge">
+                </div>
+                <div class="form-group">
+                    <label>Título do Kids</label>
+                    <div class="text-toolbar" data-for="input-kids-title">
+                        <button type="button" class="toolbar-btn" data-tag="b" title="Negrito"><i class="fa-solid fa-bold"></i></button>
+                        <button type="button" class="toolbar-btn" data-tag="i" title="Itálico"><i class="fa-solid fa-italic"></i></button>
+                        <button type="button" class="toolbar-btn" data-tag="u" title="Sublinhado"><i class="fa-solid fa-underline"></i></button>
+                    </div>
+                    <textarea id="input-kids-title" rows="2"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Parágrafo 1</label>
+                    <div class="text-toolbar" data-for="input-kids-desc1">
+                        <button type="button" class="toolbar-btn" data-tag="b" title="Negrito"><i class="fa-solid fa-bold"></i></button>
+                        <button type="button" class="toolbar-btn" data-tag="i" title="Itálico"><i class="fa-solid fa-italic"></i></button>
+                        <button type="button" class="toolbar-btn" data-tag="u" title="Sublinhado"><i class="fa-solid fa-underline"></i></button>
+                    </div>
+                    <textarea id="input-kids-desc1" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Parágrafo 2</label>
+                    <div class="text-toolbar" data-for="input-kids-desc2">
+                        <button type="button" class="toolbar-btn" data-tag="b" title="Negrito"><i class="fa-solid fa-bold"></i></button>
+                        <button type="button" class="toolbar-btn" data-tag="i" title="Itálico"><i class="fa-solid fa-italic"></i></button>
+                        <button type="button" class="toolbar-btn" data-tag="u" title="Sublinhado"><i class="fa-solid fa-underline"></i></button>
+                    </div>
+                    <textarea id="input-kids-desc2" rows="3"></textarea>
+                </div>
+                <div class="form-group">
+                    <label>Mídia / Link do Vídeo (URL YouTube/Instagram)</label>
+                    <div class="image-input-wrapper">
+                        <input type="text" id="input-kids-video-link" placeholder="Cole link de vídeo, foto ou destaque">
+                        <input type="file" id="file-kids" accept="image/*,video/*" class="admin-file-input" style="display: none;">
+                        <button type="button" class="btn btn-secondary btn-sm upload-btn" data-target="file-kids"><i class="fa-solid fa-upload"></i> Upload</button>
+                    </div>
+                    <div class="image-gallery-picker">
+                        <span class="gallery-picker-title">Ou escolha uma foto real:</span>
+                        <div class="gallery-thumbnails">
+                            <img src="assets/real_signature_burger.png" class="gallery-thumb" data-target="input-kids-video-link" title="Burger Artesanal Real">
+                            <img src="assets/real_kids_area.png" class="gallery-thumb" data-target="input-kids-video-link" title="Área Kids Real">
+                            <img src="assets/real_store_interior.png" class="gallery-thumb" data-target="input-kids-video-link" title="Interior da Loja Real">
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Aparência -->
+            <div class="tab-content" id="tab-style">
+                <h4>Aparência do Site</h4>
+                <p style="font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 16px;">
+                    Altere facilmente a paleta de cores, tema e tipografia do seu site com visualização em tempo real.
+                </p>
+                
+                <div class="form-group">
+                    <label>Esquema de Fundo (Tema)</label>
+                    <select id="input-theme-lightness">
+                        <option value="dark">Escuro (Carvão e Brasa)</option>
+                        <option value="light">Claro (Creme e Âmbar Suave)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Fonte dos Títulos</label>
+                    <select id="input-font-title">
+                        <option value="'Outfit', sans-serif">Gourmet (Outfit)</option>
+                        <option value="'Bebas Neue', sans-serif">Impactante (Bebas Neue)</option>
+                        <option value="'Playfair Display', serif">Clássico / Elegante (Playfair Display)</option>
+                        <option value="'Inter', sans-serif">Moderno / Limpo (Inter)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Fonte do Texto (Corpo)</label>
+                    <select id="input-font-body">
+                        <option value="'Inter', sans-serif">Padrão Limpo (Inter)</option>
+                        <option value="'Outfit', sans-serif">Arredondado (Outfit)</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Cor Primária (Padrão: Ouro)</label>
+                    <div class="color-picker-container">
+                        <input type="color" id="input-color-primary" value="#eab308">
+                        <span class="color-picker-label" id="label-color-primary">#eab308</span>
+                    </div>
+                </div>
+
+                <div class="form-group" style="margin-top: 10px;">
+                    <label>Cor de Destaque (Padrão: Âmbar)</label>
+                    <div class="color-picker-container">
+                        <input type="color" id="input-color-accent" value="#f59e0b">
+                        <span class="color-picker-label" id="label-color-accent">#f59e0b</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Fundo Animado -->
+            <div class="tab-content" id="tab-animations">
+                <h4>Elementos Flutuantes</h4>
+                <p style="font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 16px;">
+                    Controle as ilustrações de hambúrgueres, batatas e drinks que flutuam lentamente no plano de fundo.
+                </p>
+                
+                <div class="form-group">
+                    <label>Ativar Elementos Flutuantes</label>
+                    <select id="input-particles-enabled">
+                        <option value="true">Sim, ativar animação</option>
+                        <option value="false">Não, desativar animação</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Quantidade de Ícones</label>
+                    <select id="input-particles-count">
+                        <option value="10">Pouco (10 ícones)</option>
+                        <option value="16">Médio (16 ícones)</option>
+                        <option value="26">Muitos (26 ícones)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Velocidade de Movimento</label>
+                    <select id="input-particles-speed">
+                        <option value="slow">Lento (Suave e relaxante)</option>
+                        <option value="medium">Normal (Equilibrado)</option>
+                        <option value="fast">Rápido (Dinâmico)</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label>Tamanho dos Ícones</label>
+                    <select id="input-particles-size">
+                        <option value="small">Pequeno (Discreto)</option>
+                        <option value="medium">Médio (Padrão)</option>
+                        <option value="large">Grande (Destacado)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Tab Lojas & Contatos -->
+            <div class="tab-content" id="tab-stores">
+                <h4>Canais de Contato</h4>
+                <div class="form-group">
+                    <label>WhatsApp de Vendas (Apenas Números)</label>
+                    <input type="text" id="input-contact-whatsapp" placeholder="Ex: 5521965243034">
+                </div>
+                <div class="form-group">
+                    <label>Link do Instagram</label>
+                    <input type="text" id="input-contact-instagram" placeholder="Ex: https://instagram.com/user">
+                </div>
+                
+                <div class="drawer-divider">Filiais (Lojas Físicas)</div>
+                
+                <div class="accordion">
+                    <!-- Loja 1 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">Loja 1: Jardim Tropical <i class="fa-solid fa-chevron-down"></i></div>
+                        <div class="accordion-body">
+                            <div class="form-group">
+                                <label>Nome da Filial</label>
+                                <input type="text" id="input-store1-name">
+                            </div>
+                            <div class="form-group">
+                                <label>Status de Funcionamento</label>
+                                <select id="input-store1-open">
+                                    <option value="true">Aberto Agora</option>
+                                    <option value="false">Fechado</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Endereço Completo</label>
+                                <input type="text" id="input-store1-address">
+                            </div>
+                            <div class="form-group">
+                                <label>Horários de Funcionamento</label>
+                                <input type="text" id="input-store1-hours">
+                            </div>
+                            <div class="form-group">
+                                <label>Área Kids e Brinquedoteca</label>
+                                <select id="input-store1-kids">
+                                    <option value="true">Sim, possui</option>
+                                    <option value="false">Não possui</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Pet Friendly</label>
+                                <select id="input-store1-pet">
+                                    <option value="true">Sim, é Pet Friendly</option>
+                                    <option value="false">Não é Pet Friendly</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Link de Rota (Google Maps)</label>
+                                <input type="text" id="input-store1-maps">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Loja 2 -->
+                    <div class="accordion-item">
+                        <div class="accordion-header">Loja 2: Valverde <i class="fa-solid fa-chevron-down"></i></div>
+                        <div class="accordion-body">
+                            <div class="form-group">
+                                <label>Nome da Filial</label>
+                                <input type="text" id="input-store2-name">
+                            </div>
+                            <div class="form-group">
+                                <label>Status de Funcionamento</label>
+                                <select id="input-store2-open">
+                                    <option value="true">Aberto Agora</option>
+                                    <option value="false">Fechado</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Endereço Completo</label>
+                                <input type="text" id="input-store2-address">
+                            </div>
+                            <div class="form-group">
+                                <label>Horários de Funcionamento</label>
+                                <input type="text" id="input-store2-hours">
+                            </div>
+                            <div class="form-group">
+                                <label>Área Kids e Brinquedoteca</label>
+                                <select id="input-store2-kids">
+                                    <option value="true">Sim, possui</option>
+                                    <option value="false">Não possui</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Pet Friendly</label>
+                                <select id="input-store2-pet">
+                                    <option value="true">Sim, é Pet Friendly</option>
+                                    <option value="false">Não é Pet Friendly</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Link de Rota (Google Maps)</label>
+                                <input type="text" id="input-store2-maps">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tab Config / Export -->
+            <div class="tab-content" id="tab-config">
+                <p style="font-size: 0.85rem; color: var(--color-text-muted); line-height: 1.5; margin-bottom: 16px;">
+                    Para salvar suas edições permanentemente para todos os visitantes do site, copie o JSON de configuração abaixo e envie para o desenvolvedor ou cole-o na base `defaultContent` em `script.js`.
+                </p>
+                <div class="form-group">
+                    <label>Configuração Exportada (JSON)</label>
+                    <textarea id="output-json-config" readonly rows="8" style="font-family: monospace; font-size: 0.75rem; background: rgba(0,0,0,0.3); border-color: rgba(234,179,8,0.1); color: #fff;"></textarea>
+                    <button class="btn btn-secondary btn-sm btn-block" style="margin-top: 10px;" id="btn-copy-json">
+                        <i class="fa-solid fa-copy"></i> Copiar Código JSON
+                    </button>
+                </div>
+                <div class="drawer-divider">Ações de Risco</div>
+                <button class="btn btn-danger btn-block" id="btn-reset-factory">
+                    <i class="fa-solid fa-rotate-left"></i> Restaurar Padrões de Fábrica
+                </button>
+            </div>
+        </div>
+        <div class="drawer-footer">
+            <button class="btn btn-secondary" id="btn-admin-logout">Sair</button>
+            <button class="btn btn-primary" id="btn-admin-save">Salvar Alterações</button>
+        </div>
+    </div>
+
+    <!-- Script principal -->
+    <script type="module" src="script.js"></script>
+</body>
+</html>

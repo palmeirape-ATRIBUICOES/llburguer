@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLBURGER LAB | Sabores Brutais e Chapa Quente</title>
+    
+    <!-- Google Fonts: Bebas Neue (Heavy Impact) e Roboto Condensed -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Condensed:wght@300;400;700&family=Montserrat:wght@800;900&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link para o CSS Industrial -->
+    <link rel="stylesheet" href="style_laboratory.css">
+</head>
+<body class="lab-body">
+    <!-- Overlay de Textura de Aço Escovado -->
+    <div class="steel-texture"></div>
+
+    <!-- Header / Navbar Rústica -->
+    <header class="lab-header" id="header">
+        <div class="lab-container header-flex">
+            <a href="#hero" class="lab-logo">
+                LL<span class="neon-text">BURGER_LAB</span>
+            </a>
+            
+            <nav class="lab-nav" id="nav-menu">
+                <ul class="lab-nav-list">
+                    <li><a href="#hero" class="lab-nav-link active">// INÍCIO</a></li>
+                    <li><a href="#cardapio" class="lab-nav-link">// CARDÁPIO</a></li>
+                    <li><a href="#bastidores" class="lab-nav-link">// BASTIDORES</a></li>
+                    <li><a href="#playzone" class="lab-nav-link">// PLAYZONE</a></li>
+                    <li><a href="#qgs" class="lab-nav-link">// NOSSOS_QGs</a></li>
+                </ul>
+            </nav>
+            
+            <div class="lab-header-actions">
+                <a href="https://wa.me/5521965243034?text=Olá!%20Quero%20fazer%20um%20pedido%20brutal." target="_blank" class="lab-btn lab-btn-primary header-cta">
+                    <i class="fa-brands fa-whatsapp"></i> ENTRAR EM CONTATO
+                </a>
+                <button class="lab-menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+                    <span class="lab-bar"></span>
+                    <span class="lab-bar"></span>
+                    <span class="lab-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section Asimétrica -->
+        <section class="lab-hero" id="hero">
+            <div class="lab-container hero-grid">
+                <div class="hero-content">
+                    <span class="lab-tag">// ALTA VOLTAGEM NA CHAPA</span>
+                    <h1 class="hero-huge-title">
+                        SABOR REAL<br>
+                        <span class="neon-glow-orange">SEM FRESHNESS</span>
+                    </h1>
+                    <p class="hero-desc">
+                        No Burger Lab a regra é clara: grelha em chapa quente de ferro fundido, blend de carne Angus selecionado e cheddar escorrendo sem limites. Uma experiência gastronômica urbana, autêntica e sem firulas.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#cardapio" class="lab-btn lab-btn-primary lab-btn-lg">
+                            <i class="fa-solid fa-gears"></i> VER CARDÁPIO COMPLETO
+                        </a>
+                        <a href="#bastidores" class="lab-btn lab-btn-secondary lab-btn-lg">
+                            // VER BASTIDORES
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Showcase do Instagram (Estilo Monitor de Laboratório) -->
+                <div class="hero-monitor-showcase">
+                    <div class="monitor-frame">
+                        <div class="monitor-glare"></div>
+                        <div class="monitor-header">
+                            <span class="monitor-dot"></span>
+                            <span class="monitor-dot"></span>
+                            <span class="monitor-dot"></span>
+                            <span class="monitor-title">LIVE_FEED_REALS.EXE</span>
+                        </div>
+                        <iframe src="https://www.instagram.com/llburgeroficial/embed/" class="monitor-iframe" frameborder="0" scrolling="no" allowtransparency="true"></iframe>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Cardápio Industrial -->
+        <section class="lab-section-cardapio" id="cardapio">
+            <div class="lab-container">
+                <div class="lab-section-header">
+                    <span class="lab-tag">// MENU DE EXPERIMENTAÇÃO</span>
+                    <h2 class="lab-section-title">NOSSO CARDÁPIO COMPLETO</h2>
+                    <p class="lab-section-desc">Burgers monstruosos, batatas crocantes e bebidas trincando. Filtre por categorias ou digite o nome do seu lanche.</p>
+                </div>
+                
+                <!-- Controles do Cardápio -->
+                <div class="lab-menu-controls">
+                    <div class="lab-search-wrapper">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="menu-search-input" placeholder="DIGITE O INGREDIENTE OU NOME DO BURGER...">
+                    </div>
+                    
+                    <div class="lab-category-tabs" id="menu-category-tabs">
+                        <!-- Gerado dinamicamente -->
+                    </div>
+                </div>
+
+                <!-- Grid de Produtos -->
+                <div class="lab-products-grid" id="menu-products-grid">
+                    <!-- Gerado dinamicamente -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Bastidores (Quem Somos) -->
+        <section class="lab-section-about" id="bastidores">
+            <div class="lab-container about-grid">
+                <div class="about-monitor-card">
+                    <div class="monitor-frame">
+                        <div class="monitor-header">
+                            <span class="monitor-title">PRODUÇÃO_DIARIA_MONITOR.BAT</span>
+                        </div>
+                        <div class="about-promo-box">
+                            <i class="fa-brands fa-instagram promo-icon"></i>
+                            <h3>FOTOS SEM FILTRO</h3>
+                            <p>Tiramos fotos reais de todos os burgers que saem da nossa cozinha. Veja os stories diários diretamente no nosso Instagram!</p>
+                            <a href="https://www.instagram.com/llburgeroficial/" target="_blank" class="lab-btn lab-btn-primary">
+                                <i class="fa-brands fa-instagram"></i> SEGUIR @LLBURGEROFICIAL
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="about-text">
+                    <span class="lab-tag">// MATÉRIA-PRIMA BRUTA</span>
+                    <h2 class="lab-section-title">FOGO, METAL E OBSESSÃO POR SUCULÊNCIA</h2>
+                    <p class="highlight-text">
+                        A LLBURGER nasceu do asfalto, com uma missão direta: fazer hambúrguer de verdade, grelhado na chapa quente e servido no auge do sabor.
+                    </p>
+                    <p class="normal-text">
+                        Nossos blends Angus são moldados todas as manhãs com a proporção exata de carne e gordura. Grelhamos no vapor de ferro fundido para selar os sucos internos, garantindo aquela mordida incrivelmente macia. Não economizamos no cheddar e servimos tudo em pães brioche amanteigados e tostados na chapa.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature-box">
+                            <i class="fa-solid fa-fire-burner"></i>
+                            <div>
+                                <h4>SMASH E ANGUS</h4>
+                                <p>Prensados ou altos e suculentos na chapa de ferro quente.</p>
+                            </div>
+                        </div>
+                        <div class="feature-box">
+                            <i class="fa-solid fa-droplet"></i>
+                            <div>
+                                <h4>MOLHO DA CASA</h4>
+                                <p>Fórmulas secretas desenvolvidas em nosso laboratório diariamente.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Playzone (Área Kids) -->
+        <section class="lab-section-kids" id="playzone">
+            <div class="lab-container kids-grid">
+                <div class="kids-text">
+                    <span class="lab-tag">// ESPAÇO KIDS INTEGRADO</span>
+                    <h2 class="lab-section-title">PLAYZONE COMPLETA PARA A SUA FAMÍLIA</h2>
+                    <p class="highlight-text">
+                        Diversão bruta para os pequenos, tranquilidade total para você devorar seu burger quentinho.
+                    </p>
+                    <p class="normal-text">
+                        Nossa brinquedoteca é 100% segura, equipada com brinquedos interativos de madeira, escorregador e área de colorir. Posicionada de forma que os pais consigam manter contato visual total direto de suas mesas, sem precisar levantar da chapa.
+                    </p>
+                    <ul class="kids-features">
+                        <li><i class="fa-solid fa-shield"></i> Área acolchoada e segura</li>
+                        <li><i class="fa-solid fa-eye"></i> Visibilidade completa do salão</li>
+                        <li><i class="fa-solid fa-gamepad"></i> Brinquedos que estimulam a criatividade</li>
+                    </ul>
+                    <a href="#qgs" class="lab-btn lab-btn-primary">
+                        <i class="fa-solid fa-map-location-dot"></i> ENCONTRAR UNIDADE MAIS PRÓXIMA
+                    </a>
+                </div>
+                
+                <div class="kids-media">
+                    <div class="monitor-frame">
+                        <div class="monitor-header">
+                            <span class="monitor-title">PLAYZONE_CAM_STREAM.AVI</span>
+                        </div>
+                        <div class="video-container">
+                            <video src="assets/kids_playroom.mp4" autoplay loop muted playsinline class="lab-video"></video>
+                            <div class="video-overlay">
+                                <a href="https://www.instagram.com/stories/highlights/17946366145699258/" target="_blank" class="lab-btn lab-btn-secondary">
+                                    <i class="fa-brands fa-instagram"></i> VER STORIES REAIS
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Nossas Lojas (QGs) -->
+        <section class="lab-section-stores" id="qgs">
+            <div class="lab-container">
+                <div class="lab-section-header">
+                    <span class="lab-tag">// LOCALIZAÇÃO DOS QGs</span>
+                    <h2 class="lab-section-title">QUER COMER NA CHAPA QUENTE? VENHA ATÉ NÓS</h2>
+                </div>
+                
+                <div class="lab-stores-grid">
+                    <!-- QG 1 -->
+                    <div class="qg-card">
+                        <div class="qg-header">
+                            <span class="qg-status open">// OPERACIONAL</span>
+                            <h3>QG JARDIM TROPICAL</h3>
+                        </div>
+                        <div class="qg-body">
+                            <p class="qg-address"><i class="fa-solid fa-location-crosshairs"></i> R. Damas Batista, 947 - Jardim Tropical, Nova Iguaçu - RJ</p>
+                            <p class="qg-hours"><i class="fa-solid fa-clock"></i> Todos os dias: 18h às 00h</p>
+                            <div class="qg-tags">
+                                <span><i class="fa-solid fa-child"></i> PLAYZONE KIDS</span>
+                                <span><i class="fa-solid fa-paw"></i> PET FRIENDLY (NÃO)</span>
+                            </div>
+                        </div>
+                        <div class="qg-footer">
+                            <a href="https://maps.google.com" target="_blank" class="lab-btn lab-btn-secondary btn-sm">TRAÇAR ROTA</a>
+                            <a href="https://wa.me/5521965243034?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20QG%20Jardim%20Tropical." target="_blank" class="lab-btn lab-btn-primary btn-sm">WHATSAPP</a>
+                        </div>
+                    </div>
+
+                    <!-- QG 2 -->
+                    <div class="qg-card">
+                        <div class="qg-header">
+                            <span class="qg-status open">// OPERACIONAL</span>
+                            <h3>QG VALVERDE</h3>
+                        </div>
+                        <div class="qg-body">
+                            <p class="qg-address"><i class="fa-solid fa-location-crosshairs"></i> Av. Abílio Augusto Távora, 3200 - Valverde, Nova Iguaçu - RJ</p>
+                            <p class="qg-hours"><i class="fa-solid fa-clock"></i> Todos os dias: 18h às 00h</p>
+                            <div class="qg-tags">
+                                <span><i class="fa-solid fa-child"></i> PLAYZONE KIDS</span>
+                                <span><i class="fa-solid fa-paw"></i> PET FRIENDLY</span>
+                            </div>
+                        </div>
+                        <div class="qg-footer">
+                            <a href="https://maps.google.com" target="_blank" class="lab-btn lab-btn-secondary btn-sm">TRAÇAR ROTA</a>
+                            <a href="https://wa.me/5521965243034?text=Olá!%20Gostaria%20de%20saber%20mais%20sobre%20o%20QG%20Valverde." target="_blank" class="lab-btn lab-btn-primary btn-sm">WHATSAPP</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Industrial -->
+    <footer class="lab-footer">
+        <div class="lab-container footer-grid">
+            <div class="footer-brand">
+                <a href="#hero" class="lab-logo">LL<span class="neon-text">BURGER_LAB</span></a>
+                <p>Nossa obsessão é criar hambúrgueres brutais com ingredientes reais. Sem frescura, direto na chapa quente, prontos para dominar a sua fome.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/llburgeroficial/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5521965243034" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>// NAVEGAÇÃO_DO_SISTEMA</h4>
+                <ul>
+                    <li><a href="#hero">// INÍCIO</a></li>
+                    <li><a href="#cardapio">// CARDÁPIO</a></li>
+                    <li><a href="#bastidores">// BASTIDORES</a></li>
+                    <li><a href="#playzone">// PLAYZONE</a></li>
+                    <li><a href="#qgs">// NOSSOS_QGs</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>// CENTRAL_DE_ATENDIMENTO</h4>
+                <p><i class="fa-solid fa-terminal"></i> TEL: (21) 96524-3034</p>
+                <p><i class="fa-solid fa-terminal"></i> MAIL: lab@llburger.com.br</p>
+                <p><i class="fa-solid fa-terminal"></i> HQ: R. Damas Batista, 947</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="lab-container">
+                <p>&copy; 2026 LLBURGER LAB. CODE_RESTRICTED. TODOS OS SABORES RESERVADOS.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="script_laboratory.js"></script>
+</body>
+</html>

@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLBURGER GOURMET | Experiência Editorial & Hambúrguer Premium</title>
+    
+    <!-- Google Fonts: Playfair Display (Serif Elegante) e Outfit (Sans-Serif Moderno) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Outfit:wght@200;300;400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Link para o CSS Editorial -->
+    <link rel="stylesheet" href="style_gourmet.css">
+</head>
+<body class="gourmet-body">
+
+    <!-- Header / Navbar Editorial -->
+    <header class="gourmet-header" id="header">
+        <div class="gourmet-container header-flex">
+            <a href="#hero" class="gourmet-logo">
+                LL<span>BURGER</span> <small>Gourmet</small>
+            </a>
+            
+            <nav class="gourmet-nav" id="nav-menu">
+                <ul class="gourmet-nav-list">
+                    <li><a href="#hero" class="gourmet-nav-link active">Início</a></li>
+                    <li><a href="#cardapio" class="gourmet-nav-link">O Cardápio</a></li>
+                    <li><a href="#historia" class="gourmet-nav-link">Nossa Arte</a></li>
+                    <li><a href="#kids" class="gourmet-nav-link">Espaço Família</a></li>
+                    <li><a href="#unidades" class="gourmet-nav-link">Unidades</a></li>
+                </ul>
+            </nav>
+            
+            <div class="gourmet-header-actions">
+                <a href="https://wa.me/5521965243034?text=Olá!%20Gostaria%20de%20fazer%20um%20pedido%20gourmet." target="_blank" class="gourmet-btn gourmet-btn-primary header-cta">
+                    Fazer Pedido
+                </a>
+                <button class="gourmet-menu-toggle" id="menu-toggle" aria-label="Abrir Menu">
+                    <span class="gourmet-bar"></span>
+                    <span class="gourmet-bar"></span>
+                    <span class="gourmet-bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section Minimalista/Editorial -->
+        <section class="gourmet-hero" id="hero">
+            <div class="gourmet-container hero-grid">
+                <div class="hero-content">
+                    <span class="gourmet-tag">Coleção Artesanal</span>
+                    <h1 class="hero-title">
+                        A simplicidade<br> do ingrediente<br> <em>de verdade</em>.
+                    </h1>
+                    <p class="hero-desc">
+                        No LLBURGER Gourmet, cada hambúrguer é uma peça de design culinário. Blends de carne Angus selecionada, grelha no ponto exato da suculência e pães brioche que derretem na boca. Uma harmonia perfeita entre o rústico e o sofisticado.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#cardapio" class="gourmet-btn gourmet-btn-primary gourmet-btn-lg">
+                            Explorar Cardápio
+                        </a>
+                        <a href="#historia" class="gourmet-btn gourmet-btn-secondary gourmet-btn-lg">
+                            Conhecer Nossa Arte
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- Imagem Editorial Grande com Moldura -->
+                <div class="hero-frame-showcase">
+                    <div class="editorial-frame">
+                        <img src="assets/real_signature_burger.png" alt="LLBURGER Gourmet Premium" class="editorial-img">
+                        <div class="editorial-caption">
+                            <span>Double Cheddar Angus de Assinatura</span>
+                            <small>Fotografia Real tirada em nossa cozinha</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Cardápio Editorial -->
+        <section class="gourmet-section-cardapio" id="cardapio">
+            <div class="gourmet-container">
+                <div class="gourmet-section-header">
+                    <span class="gourmet-tag">Cardápio de Temporada</span>
+                    <h2 class="gourmet-section-title">Nossa Seleção Completa</h2>
+                    <p class="gourmet-section-desc">Fórmulas autorais desenvolvidas por nossos chefs com ingredientes frescos e nobres. Navegue e faça a sua escolha.</p>
+                </div>
+                
+                <!-- Controles do Cardápio -->
+                <div class="gourmet-menu-controls">
+                    <div class="gourmet-search-wrapper">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" id="menu-search-input" placeholder="Buscar ingrediente ou prato...">
+                    </div>
+                    
+                    <div class="gourmet-category-tabs" id="menu-category-tabs">
+                        <!-- Gerado dinamicamente via script -->
+                    </div>
+                </div>
+
+                <!-- Grid de Produtos Gourmet -->
+                <div class="gourmet-products-grid" id="menu-products-grid">
+                    <!-- Gerado dinamicamente via script -->
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Nossa Arte / Bastidores -->
+        <section class="gourmet-section-story" id="historia">
+            <div class="gourmet-container story-grid">
+                <div class="story-image-column">
+                    <div class="editorial-double-frame">
+                        <div class="frame-one">
+                            <img src="assets/real_store_interior.png" alt="Interior LLBURGER" class="story-img">
+                        </div>
+                        <div class="frame-two">
+                            <div class="story-overlay-card">
+                                <h3>Curadoria de Ingredientes</h3>
+                                <p>Cheddar inglês legítimo, hortaliças orgânicas lavadas uma a uma e bacon de cura lenta defumado com lenha frutífera.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="story-text-column">
+                    <span class="gourmet-tag">Trabalho Manual</span>
+                    <h2 class="gourmet-section-title">O Respeito ao Blend e ao Tempo</h2>
+                    <p class="highlight-text">
+                        Não acreditamos em atalhos. Grelhar hambúrguer é uma arte de precisão, temperatura e paixão.
+                    </p>
+                    <p class="normal-text">
+                        Nossas carnes nunca são congeladas. O blend de costela e acém Angus é moído e moldado diariamente em porções que preservam a gordura natural, responsável pelo sabor e suculência incomparáveis. A chapa extremamente quente sela a carne num instante, criando uma crosta dourada e caramelizada que mantém o interior úmido e macio.
+                    </p>
+                    <div class="signature-quote">
+                        <blockquote>
+                            "O hambúrguer perfeito é a soma de detalhes perfeitos."
+                        </blockquote>
+                        <cite>— Equipe de Cozinha LLBURGER</cite>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Espaço Kids / Família -->
+        <section class="gourmet-section-kids" id="kids">
+            <div class="gourmet-container kids-grid">
+                <div class="kids-text-column">
+                    <span class="gourmet-tag">Espaço Kids & Família</span>
+                    <h2 class="gourmet-section-title">Momentos Felizes para Todas as Idades</h2>
+                    <p class="highlight-text">
+                        Um salão de alta gastronomia que acolhe perfeitamente a sua família inteira.
+                    </p>
+                    <p class="normal-text">
+                        Enquanto você aproveita uma refeição tranquila e relaxante, seus filhos se divertem em nosso Espaço Kids. Uma brinquedoteca moderna, limpa e com monitores, equipada com casinha de madeira, escorregadores e uma mesa interativa para desenhar e colorir.
+                    </p>
+                    <div class="kids-highlights">
+                        <div class="kh-item">
+                            <span class="kh-num">01</span>
+                            <div>
+                                <h4>Tranquilidade e Visão</h4>
+                                <p>Posicionado de modo que você possa vigiar seus filhos sem sair do seu lugar.</p>
+                            </div>
+                        </div>
+                        <div class="kh-item">
+                            <span class="kh-num">02</span>
+                            <div>
+                                <h4>Segurança Reforçada</h4>
+                                <p>Piso emborrachado e quinas protegidas contra acidentes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="kids-media-column">
+                    <div class="magazine-video-frame">
+                        <video src="assets/kids_playroom.mp4" autoplay loop muted playsinline class="kids-magazine-video"></video>
+                        <div class="video-instagram-button">
+                            <a href="https://www.instagram.com/stories/highlights/17946366145699258/" target="_blank" class="gourmet-btn gourmet-btn-secondary">
+                                <i class="fa-brands fa-instagram"></i> Assistir no Instagram
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Seção Nossas Unidades -->
+        <section class="gourmet-section-stores" id="unidades">
+            <div class="gourmet-container">
+                <div class="gourmet-section-header">
+                    <span class="gourmet-tag">Nossas Unidades</span>
+                    <h2 class="gourmet-section-title">Onde nos Encontrar</h2>
+                    <p class="gourmet-section-desc">Duas casas aconchegantes e modernas planejadas para oferecer a melhor experiência.</p>
+                </div>
+                
+                <div class="gourmet-stores-grid">
+                    <!-- Unidade 1 -->
+                    <div class="gourmet-store-card">
+                        <div class="gourmet-store-body">
+                            <div class="store-badge-status open">Disponível</div>
+                            <h3>Unidade Jardim Tropical</h3>
+                            <p class="store-address"><i class="fa-solid fa-location-dot"></i> R. Damas Batista, 947 - Jardim Tropical, Nova Iguaçu - RJ</p>
+                            <p class="store-hours"><i class="fa-solid fa-clock"></i> Horário: Diariamente, das 18h às 00h</p>
+                            <div class="store-amenities">
+                                <span><i class="fa-solid fa-child"></i> Espaço Kids</span>
+                                <span><i class="fa-solid fa-circle-xmark"></i> Pet Friendly (Não)</span>
+                            </div>
+                        </div>
+                        <div class="gourmet-store-footer">
+                            <a href="https://maps.google.com" target="_blank" class="gourmet-btn gourmet-btn-secondary btn-sm">Rotas</a>
+                            <a href="https://wa.me/5521965243034?text=Olá!%20Gostaria%20de%20reservar%20ou%20saber%20mais%20sobre%20a%20unidade%20Jardim%20Tropical." target="_blank" class="gourmet-btn gourmet-btn-primary btn-sm">WhatsApp</a>
+                        </div>
+                    </div>
+
+                    <!-- Unidade 2 -->
+                    <div class="gourmet-store-card">
+                        <div class="gourmet-store-body">
+                            <div class="store-badge-status open">Disponível</div>
+                            <h3>Unidade Valverde</h3>
+                            <p class="store-address"><i class="fa-solid fa-location-dot"></i> Av. Abílio Augusto Távora, 3200 - Valverde, Nova Iguaçu - RJ</p>
+                            <p class="store-hours"><i class="fa-solid fa-clock"></i> Horário: Diariamente, das 18h às 00h</p>
+                            <div class="store-amenities">
+                                <span><i class="fa-solid fa-child"></i> Espaço Kids</span>
+                                <span><i class="fa-solid fa-paw"></i> Pet Friendly</span>
+                            </div>
+                        </div>
+                        <div class="gourmet-store-footer">
+                            <a href="https://maps.google.com" target="_blank" class="gourmet-btn gourmet-btn-secondary btn-sm">Rotas</a>
+                            <a href="https://wa.me/5521965243034?text=Olá!%20Gostaria%20de%20reservar%20ou%20saber%20mais%20sobre%20a%20unidade%20Valverde." target="_blank" class="gourmet-btn gourmet-btn-primary btn-sm">WhatsApp</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer Editorial -->
+    <footer class="gourmet-footer">
+        <div class="gourmet-container footer-grid">
+            <div class="footer-brand">
+                <a href="#hero" class="gourmet-logo">LL<span>BURGER</span> <small>Gourmet</small></a>
+                <p>Nossa filosofia baseia-se na excelência técnica, ingredientes de altíssima qualidade e dedicação total ao paladar do cliente.</p>
+                <div class="footer-socials">
+                    <a href="https://www.instagram.com/llburgeroficial/" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://wa.me/5521965243034" target="_blank"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-links">
+                <h4>Navegação</h4>
+                <ul>
+                    <li><a href="#hero">Início</a></li>
+                    <li><a href="#cardapio">Cardápio</a></li>
+                    <li><a href="#historia">Bastidores</a></li>
+                    <li><a href="#kids">Espaço Família</a></li>
+                    <li><a href="#unidades">Unidades</a></li>
+                </ul>
+            </div>
+            
+            <div class="footer-contact">
+                <h4>Contatos & Reservas</h4>
+                <p><i class="fa-solid fa-phone"></i> (21) 96524-3034</p>
+                <p><i class="fa-solid fa-envelope"></i> gourmet@llburger.com.br</p>
+                <p><i class="fa-solid fa-map-pin"></i> Nova Iguaçu - Rio de Janeiro</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <div class="gourmet-container">
+                <p>&copy; 2026 LLBURGER Gourmet. Todos os direitos reservados. Design Editorial e Premium.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script type="module" src="script_gourmet.js"></script>
+</body>
+</html>
