@@ -6,6 +6,9 @@ document.addEventListener('DOMContentLoaded', () => {
         history.scrollRestoration = 'manual';
     }
     window.scrollTo(0, 0);
+    // Garantir que a página fique no topo mesmo após o carregamento tardio de iframes/scripts
+    setTimeout(() => window.scrollTo(0, 0), 100);
+    setTimeout(() => window.scrollTo(0, 0), 500);
 
     // --- NAVBAR MOBILE TOGGLE ---
     const menuToggle = document.getElementById('menu-toggle');
