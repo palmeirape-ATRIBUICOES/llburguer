@@ -1,4 +1,6 @@
 import './menu.js';
+import realKidsAreaImg from './assets/real_kids_area.png';
+import kidsAreaImg from './assets/kids_area.png';
 
 document.addEventListener('DOMContentLoaded', () => {
     // Forçar a página a carregar no topo e prevenir restauração automática do scroll do navegador
@@ -406,19 +408,19 @@ document.addEventListener('DOMContentLoaded', () => {
         if (kMediaContainer) {
             let url = currentContent.kids.videoLink;
             // Se for um link do Instagram/YouTube ou vídeo, filtramos e mostramos as imagens locais padrão
-            let displayImg = "assets/real_kids_area.png";
+            let displayImg = realKidsAreaImg;
             if (url && !url.includes('instagram.com') && !url.includes('youtube.com') && !url.includes('youtu.be') && !url.includes('.mp4') && !url.includes('stories/highlights')) {
                 displayImg = url;
             }
             
-            if (displayImg === "assets/real_kids_area.png") {
+            if (displayImg === "assets/real_kids_area.png" || displayImg === realKidsAreaImg) {
                 kMediaContainer.innerHTML = `
                     <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
                         <div class="kids-image-wrapper">
-                            <img src="assets/real_kids_area.png" alt="Área Kids LLBURGUER 1" class="kids-img" style="width: 100%; height: 100%; border-radius: 8px; object-fit: cover; box-shadow: 0 10px 25px rgba(0,0,0,0.4); border: 1px solid rgba(234, 179, 8, 0.15);">
+                            <img src="${realKidsAreaImg}" alt="Área Kids LLBURGUER 1" class="kids-img" style="width: 100%; height: 100%; border-radius: 8px; object-fit: cover; box-shadow: 0 10px 25px rgba(0,0,0,0.4); border: 1px solid rgba(234, 179, 8, 0.15);">
                         </div>
                         <div class="kids-image-wrapper">
-                            <img src="assets/kids_area.png" alt="Área Kids LLBURGUER 2" class="kids-img" style="width: 100%; height: 100%; border-radius: 8px; object-fit: cover; box-shadow: 0 10px 25px rgba(0,0,0,0.4); border: 1px solid rgba(234, 179, 8, 0.15);">
+                            <img src="${kidsAreaImg}" alt="Área Kids LLBURGUER 2" class="kids-img" style="width: 100%; height: 100%; border-radius: 8px; object-fit: cover; box-shadow: 0 10px 25px rgba(0,0,0,0.4); border: 1px solid rgba(234, 179, 8, 0.15);">
                         </div>
                     </div>
                 `;
