@@ -17,9 +17,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const menuToggle = document.getElementById('menu-toggle');
     const navMenu = document.getElementById('nav-menu');
     const navLinks = document.querySelectorAll('.nav-link');
-    const burgerContainer = document.querySelector('.burger-real-container');
-    const burgerSlices = document.querySelectorAll('.burger-real-slice');
-    const tooltips = document.querySelectorAll('.burger-tooltip');
     
     // --- STICKY HEADER ---
     window.addEventListener('scroll', () => {
@@ -28,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
         } else {
             header.classList.remove('scrolled');
         }
-        updateBurgerScroll();
         updateActiveLink();
     });
 
@@ -65,56 +61,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-
-    // --- LÓGICA DE DESMONTAGEM DO HAMBÚRGUER ---
-    function updateBurgerScroll() {
-        if (!burgerContainer) return;
-        
-        const maxScroll = 550;
-        const currentScroll = window.scrollY;
-        
-        // Calcula a proporção (de 0 a 1)
-        let ratio = currentScroll / maxScroll;
-        ratio = Math.max(0, Math.min(1, ratio)); // Clampa entre 0 e 1
-        
-        // Atualiza a variável CSS no container para as fatias de imagens reais se moverem
-        burgerContainer.style.setProperty('--scroll-ratio', ratio);
-    }
-    
-    // Executa uma vez no início para alinhar o hambúrguer
-    updateBurgerScroll();
-
-    // --- INTERAÇÃO DE HOVER E TOOLTIPS ---
-    burgerSlices.forEach(slice => {
-        slice.addEventListener('mouseenter', () => {
-            const currentRatio = parseFloat(burgerContainer.style.getPropertyValue('--scroll-ratio') || 0);
-            // Só exibe tooltips se o hambúrguer estiver minimamente aberto (ratio > 0.25)
-            if (currentRatio < 0.25) return;
-            
-            const sliceId = slice.getAttribute('id');
-            // Mapeia real-slice-top -> tooltip-real-top
-            const targetTooltipId = sliceId.replace('real-slice-', 'tooltip-real-');
-            const activeTooltip = document.getElementById(targetTooltipId);
-            
-            if (activeTooltip) {
-                // Remove active de outros
-                tooltips.forEach(t => t.classList.remove('active'));
-                // Ativa o tooltip correto
-                activeTooltip.classList.add('active');
-            }
-        });
-        
-        slice.addEventListener('mouseleave', () => {
-            tooltips.forEach(t => t.classList.remove('active'));
-        });
-    });
-
-    const burgerStickyWrapper = document.querySelector('.burger-sticky-wrapper');
-    if (burgerStickyWrapper) {
-        burgerStickyWrapper.addEventListener('mouseleave', () => {
-            tooltips.forEach(t => t.classList.remove('active'));
-        });
-    };
 
     // --- SISTEMA DE ADMINISTRAÇÃO E PERSONALIZAÇÃO DE CONTEÚDO ---
     const defaultContent = {
