@@ -458,175 +458,175 @@ ul {
     overflow: visible;
 }
 
-.hero-instagram-card {
-    position: relative;
-    width: 100%;
-    max-width: 440px;
-    border-radius: 20px;
-    background: rgba(36, 26, 14, 0.25); /* Fundo super transparente com tom do site */
-    border: 1.5px solid rgba(234, 179, 8, 0.25);
-    backdrop-filter: blur(16px);
-    -webkit-backdrop-filter: blur(16px);
-    box-shadow: 0 0 40px rgba(0, 0, 0, 0.4), inset 0 0 20px rgba(255, 255, 255, 0.02);
-    overflow: hidden;
-    padding: 24px;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    transition: var(--transition-smooth);
-}
 
-.hero-instagram-card:hover {
-    border-color: rgba(234, 179, 8, 0.45);
-    box-shadow: 0 0 50px rgba(234, 179, 8, 0.08), 0 20px 60px rgba(0, 0, 0, 0.5);
-    transform: translateY(-4px);
-}
-
-/* Header do Instagram Mockup */
-.insta-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-}
-
-.insta-profile-info {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-.insta-profile-img {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    border: 2px solid var(--color-primary);
-    object-fit: cover;
-}
-
-.insta-profile-text {
-    display: flex;
-    flex-direction: column;
-    gap: 2px;
-}
-
-.insta-username {
-    display: flex;
-    align-items: center;
-    gap: 6px;
-    font-family: var(--font-title);
-    font-size: 1.05rem;
-    font-weight: 700;
-    color: #ffffff;
-}
-
-.insta-verified-icon {
-    color: #3897f0;
-    font-size: 0.9rem;
-}
-
-.insta-stats {
-    font-size: 0.78rem;
-    color: var(--color-text-muted);
-}
-
-.insta-follow-btn {
-    background: #0095f6;
-    color: #ffffff;
-    border: none;
-    padding: 6px 16px;
-    font-size: 0.85rem;
-    font-weight: 600;
-    border-radius: 6px;
-    cursor: pointer;
-    transition: var(--transition-quick);
-}
-
-.insta-follow-btn:hover {
-    background: #1877f2;
-}
-
-/* Grid de fotos */
-.insta-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 8px;
-    width: 100%;
-}
-
-.insta-grid-item {
-    position: relative;
-    aspect-ratio: 1 / 1;
-    border-radius: 8px;
-    overflow: hidden;
-    background: rgba(0,0,0,0.1);
-}
-
-.insta-grid-item img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: var(--transition-smooth);
-}
-
-.insta-item-overlay {
+.scroll-indicator-burger {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: -20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    color: var(--color-text-muted);
+    font-size: 0.8rem;
+    opacity: 0.5;
+    animation: pulse 2s infinite;
+    pointer-events: none;
+    z-index: 5;
+}
+
+.mouse-icon {
+    width: 18px;
+    height: 28px;
+    border: 2px solid var(--color-text-muted);
+    border-radius: 9px;
+    position: relative;
+}
+
+.mouse-icon .wheel {
+    width: 4px;
+    height: 6px;
+    background-color: var(--color-primary);
+    border-radius: 2px;
+    position: absolute;
+    top: 5px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: scrollWheel 1.5s infinite;
+}
+
+.burger-sticky-wrapper {
+    position: sticky;
+    top: 100px;
+    width: 100%;
+    max-width: 400px;
+    height: 440px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+/* Container de Imagens */
+.burger-real-container {
+    position: relative;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.6);
     display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 12px;
-    opacity: 0;
-    color: #ffffff;
-    font-size: 0.8rem;
-    font-weight: 600;
-    transition: var(--transition-quick);
-}
-
-.insta-grid-item:hover img {
-    transform: scale(1.1);
-}
-
-.insta-grid-item:hover .insta-item-overlay {
-    opacity: 1;
-}
-
-/* Footer do Instagram Mockup */
-.insta-footer {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    margin-top: 4px;
-}
-
-.btn-view-insta {
-    display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 8px;
-    font-family: var(--font-title);
-    font-weight: 600;
-    font-size: 0.9rem;
+}
+
+/* Sombra Rústica do Hambúrguer no Chão */
+.burger-real-shadow {
+    position: absolute;
+    bottom: 25px;
+    width: 260px;
+    height: 14px;
+    background: rgba(0, 0, 0, 0.9);
+    filter: blur(8px);
+    border-radius: 50%;
+    z-index: 1;
+    transition: transform 0.25s cubic-bezier(0.1, 0.8, 0.3, 1), opacity 0.25s;
+    transform: scale(calc(1 - (var(--scroll-ratio, 0) * 0.25)));
+    opacity: calc(0.9 - (var(--scroll-ratio, 0) * 0.5));
+    pointer-events: none;
+}
+
+/* Estilo para as fatias reais do hambúrguer */
+.burger-real-slice {
+    position: absolute;
     width: 100%;
-    padding: 12px;
-    border-radius: 8px;
-    border: 1px solid rgba(234, 179, 8, 0.2);
-    background: rgba(234, 179, 8, 0.05);
-    color: var(--color-primary);
+    height: 100%;
+    object-fit: contain;
+    /* O pulo do gato: remove o fundo preto da imagem da fatia e mescla perfeitamente no fundo escuro */
+    mix-blend-mode: screen;
+    z-index: 2;
+    transform-origin: center center;
+    transform: translateY(calc(var(--scroll-ratio, 0) * var(--displacement, 0) * 1px)) rotate(calc(var(--scroll-ratio, 0) * var(--rotate-val, 0) * 0.08deg));
+    transition: transform 0.25s cubic-bezier(0.1, 0.8, 0.3, 1), filter 0.3s ease, opacity 0.3s ease;
     cursor: pointer;
-    transition: var(--transition-smooth);
 }
 
-.btn-view-insta:hover {
-    background: linear-gradient(135deg, var(--color-primary), var(--color-accent));
-    color: #080705;
-    border-color: transparent;
-    box-shadow: 0 4px 15px rgba(234, 179, 8, 0.15);
+/* Displacements individuais (imagens reais precisam de um espaçamento natural) */
+#real-slice-top { --displacement: -160; --rotate-val: -12; z-index: 6; }
+#real-slice-bacon { --displacement: -90; --rotate-val: 8; z-index: 5; }
+#real-slice-patty { --displacement: -10; --rotate-val: -5; z-index: 4; }
+#real-slice-salad { --displacement: 70; --rotate-val: 10; z-index: 3; }
+#real-slice-bottom { --displacement: 140; --rotate-val: -3; z-index: 2; }
+
+/* Efeito de foco ao passar o mouse */
+.burger-real-container:hover .burger-real-slice {
+    opacity: 0.25;
+    filter: brightness(0.6) grayscale(0.3);
 }
+
+.burger-real-container .burger-real-slice:hover {
+    opacity: 1;
+    filter: brightness(1.25) grayscale(0) drop-shadow(0 15px 30px rgba(224, 159, 62, 0.35));
+    transform: translateY(calc(var(--scroll-ratio, 0) * var(--displacement, 0) * 1px - 15px)) rotate(calc(var(--scroll-ratio, 0) * var(--rotate-val, 0) * 0.08deg)) scale(1.05);
+    z-index: 10; /* Garante que fique por cima de tudo no hover */
+}
+
+/* Tooltips Rústicos */
+.burger-tooltip {
+    position: absolute;
+    right: -110px;
+    width: 230px;
+    background: rgba(18, 18, 18, 0.96);
+    border: 1px solid rgba(224, 159, 62, 0.3);
+    padding: 16px;
+    border-radius: 4px; /* Reto para visual mais rústico */
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.9);
+    backdrop-filter: blur(10px);
+    opacity: 0;
+    pointer-events: none;
+    transform: translateX(20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    z-index: 100;
+}
+
+.burger-tooltip::before {
+    content: '';
+    position: absolute;
+    left: -6px;
+    top: 50%;
+    transform: translateY(-50%) rotate(45deg);
+    width: 12px;
+    height: 12px;
+    background: rgba(18, 18, 18, 0.96);
+    border-left: 1px solid rgba(224, 159, 62, 0.3);
+    border-bottom: 1px solid rgba(224, 159, 62, 0.3);
+}
+
+.burger-tooltip h5 {
+    font-family: var(--font-title);
+    color: var(--color-primary);
+    font-size: 1.25rem;
+    font-weight: 400;
+    margin-bottom: 6px;
+    letter-spacing: 0.5px;
+}
+
+.burger-tooltip p {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    line-height: 1.45;
+    font-weight: 300;
+}
+
+/* Exibição via JS */
+.burger-tooltip.active {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Alturas dos Tooltips nos Posições de Imagens */
+#tooltip-real-top { top: -20px; }
+#tooltip-real-bacon { top: 50px; }
+#tooltip-real-patty { top: 120px; }
+#tooltip-real-salad { top: 210px; }
+#tooltip-real-bottom { top: 290px; }
+
 
 /* Instagram Promo Cards (Quem Somos & Kids) */
 .about-instagram-promo, .kids-instagram-promo {
